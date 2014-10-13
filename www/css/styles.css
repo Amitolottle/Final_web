@@ -5,6 +5,7 @@
 	color: white;
 }
 
+/*Creacion y carga de las fuentas
 /*Index home login*/
 header{
 	background-image: url("../img/fondo_1_log.png");
@@ -76,3 +77,18 @@ header{
 }
 
 /*----------Fin Barra de navegacion--------*/
+
+/*--------Inicio contenido del header----*/
+
+#login_header figure{
+	position: relative;
+	margin: 4% auto;
+	width: 25%;
+}
+#login_header figure img{
+width: 100%;
+}
+#login_header p{
+	font-size: 40px;
+	padding-bottom: 5%;
+}

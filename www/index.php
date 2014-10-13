@@ -7,7 +7,7 @@
 	<meta name= "viewport" content="width=device-width">
 </head>
 <body>
-	<header> 
+	<header id="login_header"> 
 		<nav id="login_nav">
 			<form action="">
 				<label for="user"><img src="img/user_log_icon.png" alt=""></label>
