@@ -2,40 +2,66 @@
 *{
 	margin: 0;
 	padding: 0;
-	color: white;
 }
 
-/*Creacion y carga de las fuentas
+/*Creacion y carga de las fuentas*/
+@font-face {
+    font-family: bebasNeue;
+    src: url(../font/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: alwaysInMyHeart;
+    src: url(../font/Always In My Heart.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: helvetica_light;
+    src: url(../font/HELVETICALTSTD-LIGHT.OTF);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 /*Index home login*/
-header{
+#login_header{
 	background-image: url("../img/fondo_1_log.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	text-align: center;
 	width: 100%;
+	color: white;
 }
 
 /*----------Inicio Barra de navegacion--------*/
 
 /*cambiar el color del placeholder*/
 ::-webkit-input-placeholder { /* WebKit browsers */
+	font-family: helvetica_light;
     color:    white;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	font-family: helvetica_light;
    color:    white;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
+	font-family: helvetica_light;
    color:    white;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
+	font-family: helvetica_light;
    color:    white;
 }
 
 #login_nav form{
+	font-family: helvetica_light;
 	padding: 15px 0 15px 0;
-	background-color:  rgba(35,35,35,0.4);
+	background-color:  rgba(35,35,35,0.6);
 	margin-bottom: 1%;
 }
 
@@ -55,24 +81,26 @@ header{
 
 	width: 1%;
 }
-#login_nav input[placeholder]{
-	color:white;
-}
-#login_nav input{
+.home_forms input{
 	background: transparent;
 	border: 1px solid white; 
-	border-radius: 5px;
+	border-radius: 3px;
+	color: white;
 	margin-right: 5%;
 	padding: 0.3%;
 	width: 15%;
 	
 }
-#login_nav input[type=submit]{
+.home_forms input[type=submit]{
 	background-image: url("../img/btn_log.png");
-	background-size: contain;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	border: none;
 	border-radius: 0;
-	padding: 0.5%;
+	font-family: bebasNeue;
+	font-size: 25px;
+	padding: 1px 1px;
+	min-width: 133px;
 	width: 10%;
 }
 
@@ -86,9 +114,156 @@ header{
 	width: 25%;
 }
 #login_header figure img{
-width: 100%;
+	width: 100%;
 }
 #login_header p{
+	font-family: bebasNeue;
 	font-size: 40px;
 	padding-bottom: 5%;
 }
+
+/*------------FIN DEL HEADER---------*/
+
+/*--------Inicio Introduccion---------*/
+
+#login_div{
+	background-image: url("../img/fondo_2_log.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+
+}
+#login_div p{
+	color: black;
+	font-family: helvetica_light;
+	font-size: 25px;
+	padding: 5% 10%;
+	margin: 0 auto;
+	max-width: 75%;
+}
+
+/*------------FIN DE LA INTRODUCCION---------*/
+
+/*------------Inicio del contenido--------*/
+#login_conten{
+	background-image: url("../img/fondo_3_log.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0 
+}
+#login_conten header{
+	background-color: rgba(35,35,35,0.5);
+	background-image: none;
+	
+}
+#login_conten header figure{
+	margin: 0 auto;
+	padding: 1% 0 0.5% 0;
+	width: 5%;
+}
+#login_conten header figure img{
+	width: 100%;
+}
+
+#login_conten section{
+	padding: 2.5% 10%;
+}
+#ultima_historia{
+	background-color: rgba(242,85,85,0.5);
+	display: inline-block;
+	height: 100%;
+	padding: 12px;
+	width: 50%;
+	
+}
+#ultima_historia h2{
+	color: white;
+	font-family: helvetica;
+	font-size: 17px;
+	font-weight: normal;
+	padding: 2% 0 1% 1%;
+}
+#ultima_historia .area_de_texto{
+	background-image: url("../img/fondo_noticia_log.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: rgb(110,110,110);
+	font-family: helvetica_light;
+	padding: 2%;
+}
+.area_de_texto h1{
+	color: black;
+	font-family: bebasNeue;
+	font-size: 28px;
+	margin-bottom: 4%;
+}
+.area_de_texto u{
+	border-bottom: 2px solid black;
+	text-decoration: none;
+}
+
+/*---------------ASIDE---------------*/
+#login_conten aside{
+	display: inline-block;
+	margin-left: 10%;
+	vertical-align: top;
+	width: 30%;
+}
+#form_login{
+	background-image: url("../img/fondo_log_form.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-bottom: 10%;
+	padding: 0 22px 10px 15px;
+	width: 100%;	
+}
+
+#form_registro{
+	background-image: url("../img/fondo_reg_form.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 0 22px 10px 15px;
+	width: 100%;
+	
+}
+#login_conten aside h3{
+	color: white;
+	font-family: helvetica_light;
+	font-size: 22px;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+#login_conten aside input{
+	height: auto;
+	margin-bottom: 10px;
+	padding: 2% 0 2% 2%;
+	width: 100%;
+}
+#login_conten aside input[type=submit]{
+	background-image: url("../img/btn_log_2.png");
+	color: black;
+	font-size: 25px;
+	min-width: 0;
+	padding: 4px 0 4px 0;
+	width: 30%;
+}
+#login_conten select{
+	-webkit-appearance:none;
+	background: transparent;
+	background-image: url("../img/fondo_select_genero.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	color: white;
+	font-size: 20px;
+	min-width: 0;
+	padding: 2.5% 4px 2.5% 2px;
+	width: 40%;
+}
+
+#login_conten select option {
+    background:transparent;
+    color: black;
+}
+/*-------------------FIN ASIDER---------------------------*/
+/*-----------------FIN CONTENIDO--------------------------*/
