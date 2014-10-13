@@ -8,12 +8,13 @@
 </head>
 <body>
 	<header> 
-		<nav>
+		<nav id="login_nav">
 			<form action="">
+				<label for="user"><img src="img/user_log_icon.png" alt=""></label>
 				<input type="text" name="user" placeholder="Correo">
+				<label for="password"><img src="img/password_log_icon.png" alt=""></label>
 				<input type="text" name="password" placeholder="Contraseña">
-				<!--Boton para iniciar sesion-->
-				<input type="submit" value="Iniciar Sesion">
+				<input type="submit" value="INICIAR SESION">
 				<a id="help_button" href=""><img src="img/btn_help.png" alt=""></a>
 			</form>
 		</nav>
