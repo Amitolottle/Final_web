@@ -2,4 +2,93 @@
 *{
 	margin: 0;
 	padding: 0;
+	color: white;
+}
+
+/*Creacion y carga de las fuentas
+/*Index home login*/
+header{
+	background-image: url("../img/fondo_1_log.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	text-align: center;
+	width: 100%;
+}
+
+/*----------Inicio Barra de navegacion--------*/
+
+/*cambiar el color del placeholder*/
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    white;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    white;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    white;
+}
+
+#login_nav form{
+	padding: 15px 0 15px 0;
+	background-color:  rgba(35,35,35,0.4);
+	margin-bottom: 1%;
+}
+
+#login_nav label{
+	margin-right: 0.5%;
+}
+#login_nav img{
+	vertical-align: middle;
+	width: 2%;
+}
+
+#login_nav label[for=user] img{
+	
+	width: 4%;
+}
+#login_nav label[for=password] img{
+
+	width: 1%;
+}
+#login_nav input[placeholder]{
+	color:white;
+}
+#login_nav input{
+	background: transparent;
+	border: 1px solid white; 
+	border-radius: 5px;
+	margin-right: 5%;
+	padding: 0.3%;
+	width: 15%;
+	
+}
+#login_nav input[type=submit]{
+	background-image: url("../img/btn_log.png");
+	background-size: contain;
+	border: none;
+	border-radius: 0;
+	padding: 0.5%;
+	width: 10%;
+}
+
+/*----------Fin Barra de navegacion--------*/
+
+/*--------Inicio contenido del header----*/
+
+#login_header figure{
+	position: relative;
+	margin: 4% auto;
+	width: 25%;
+}
+#login_header figure img{
+width: 100%;
+}
+#login_header p{
+	font-size: 40px;
+	padding-bottom: 5%;
 }
