@@ -14,14 +14,14 @@
 				<input type="text" name="user" placeholder="Correo">
 				<label for="password"><img src="img/password_log_icon.png" alt=""></label>
 				<input type="text" name="password" placeholder="Contraseña">
-				<input type="submit" value="INICIAR SESION">
+				<input type="submit" value="INICIAR SESIÓN">
 				<a id="help_button" href=""><img src="img/btn_help.png" alt=""></a>
 			</form>
 		</nav>
 		<figure><img src="img/logo.png" alt=""></figure>
 		<p>¿Hasta dondé continúan las historias?</p>
 	</header>
-	<div>
+	<div id="login_div">
 		<p>
 			En continuará, serás parte de una red de escritores 
 			de historias colectivas, historias que nacen a partir 
@@ -30,11 +30,12 @@
 			mismo y descubre las posibilidades de creación que 
 			podrás generar junto a cientos de usuarios.
 			<br>
+			<br>
 			Tal vez aquí se encuentre el próximo Nobel de literatura 
 			o el creador de un movimiento venguardista
 		</p>
 	</div>
-	<div>
+	<div id="login_conten">
 		<header>
 			<figure><img src="img/logo.png" alt=""></figure>
 		</header>

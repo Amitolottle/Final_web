@@ -5,7 +5,28 @@
 	color: white;
 }
 
-/*Creacion y carga de las fuentas
+/*Creacion y carga de las fuentas*/
+@font-face {
+    font-family: bebasNeue;
+    src: url(../font/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: alwaysInMyHeart;
+    src: url(../font/Always In My Heart.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: helvetica_light;
+    src: url(../font/HELVETICALTSTD-LIGHT.OTF);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 /*Index home login*/
 header{
 	background-image: url("../img/fondo_1_log.png");
@@ -19,23 +40,28 @@ header{
 
 /*cambiar el color del placeholder*/
 ::-webkit-input-placeholder { /* WebKit browsers */
+	font-family: helvetica_light;
     color:    white;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	font-family: helvetica_light;
    color:    white;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
+	font-family: helvetica_light;
    color:    white;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
+	font-family: helvetica_light;
    color:    white;
 }
 
 #login_nav form{
+	font-family: helvetica_light;
 	padding: 15px 0 15px 0;
-	background-color:  rgba(35,35,35,0.4);
+	background-color:  rgba(35,35,35,0.6);
 	margin-bottom: 1%;
 }
 
@@ -55,9 +81,6 @@ header{
 
 	width: 1%;
 }
-#login_nav input[placeholder]{
-	color:white;
-}
 #login_nav input{
 	background: transparent;
 	border: 1px solid white; 
@@ -69,10 +92,14 @@ header{
 }
 #login_nav input[type=submit]{
 	background-image: url("../img/btn_log.png");
+	background-repeat: no-repeat;
 	background-size: contain;
 	border: none;
 	border-radius: 0;
-	padding: 0.5%;
+	font-family: bebasNeue;
+	font-size: 25px;
+	padding: 1px 1px;
+	min-width: 133px;
 	width: 10%;
 }
 
@@ -89,6 +116,50 @@ header{
 width: 100%;
 }
 #login_header p{
+	font-family: bebasNeue;
 	font-size: 40px;
 	padding-bottom: 5%;
+}
+
+/*------------FIN DEL HEADER---------*/
+
+/*--------Inicio Introduccion---------*/
+
+#login_div{
+	background-image: url("../img/fondo_2_log.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	text-align: center;
+
+}
+#login_div p{
+
+	color: black;
+	font-family: helvetica_light;
+	padding: 5% 10%;
+	margin: 0 auto;
+	font-size: 25px;
+	max-width: 75%;
+}
+
+/*------------FIN DE LA INTRODUCCION---------*/
+
+/*------------Inicio del contenido--------*/
+#login_conten{
+	background-image: url("../img/fondo_3_log.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#login_conten header{
+	background-image: none;
+	background-color: rgba(35,35,35,0.5);
+}
+#login_conten header figure{
+	margin: 0 auto;
+	padding: 1% 0 0.5% 0;
+	width: 5%;
+}
+#login_conten header figure img{
+	width: 100%;
 }
