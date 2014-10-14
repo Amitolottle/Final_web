@@ -3,7 +3,7 @@
 	<head>
 		<title>Visualizacion</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/estilos.css" />
+		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
 		<header>
