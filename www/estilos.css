@@ -1,0 +1,123 @@
+body{
+	 background-image: url('../img/fondo.png');
+	 margin: 0px;
+	 font-family: Bebas Neue;
+}
+header{
+	background: rgba(0, 0, 0, .5);
+	left: 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+}
+#cabecera h1{
+	color: white;
+	display: inline;
+	font-size: 25px;
+	position: absolute;
+	left: 8%;
+}
+#cabecera img{
+	display: inline;
+}
+#cabecera nav{
+	color: white;
+	display: inline;
+	font-size: 25px;
+	left: 60%;
+	position: absolute;
+	top: 60%;
+	}
+#cabecera ul{
+	display: inline;
+}
+#cabecera li{
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+section{
+	background: rgba(204, 255, 207, .5);
+	width: 620px;
+	height: 550px;
+	padding: 15px;
+	position: relative;
+	margin: 200px auto;
+}
+#crear input{
+	font-family: Bebas Neue;
+}
+#crear input[type="text"]{
+	appearance: none;
+	background: rgba(75, 94, 75, .5);
+	border: none;
+	color: white;
+	font-size: 40px;
+	margin-bottom: 45px;
+	padding: 8px;
+	width: 83%;
+}
+#crear #pluma{
+	left: 82%;
+	position: absolute;
+	top: 0%;
+	margin-bottom: 45px;
+}
+#crear select{
+	-webkit-appearance: none;
+	background-image: url('../img/seleccionar.png');
+	border: none;
+	border-radius: 0px;
+	font-family: Bebas Neue;
+	font-size: 15px;
+	margin-right: 15px;
+	padding: 8px;
+	width: 20%;
+}
+#crear option{
+	-webkit-appearance: none;
+	border: none;
+	border-radius: 0px;
+	background-color: red; 
+}
+#crear textarea{
+	background-image: url('../img/textura1.png');
+	height: 300px;
+	margin-top: 20px;
+	width: 605px;
+}
+#crear input [type="button"]{
+	border: none;
+	border-radius: 0px;
+	font-family: Bebas Neue;
+	background: rgba(0, 0, 0, .5);
+}
+
+aside{
+	left: 80%;
+	position: fixed;
+	top: 30%;
+}
+#barraLateral .filtro1{
+	color: white;
+	display: block;
+	font-size: 30px;
+	letter-spacing:1px;
+	margin-bottom: 10px; 
+	padding-left: 0px;
+}
+#barraLateral .filtro2{
+	color: white;
+	display: block;
+	font-size: 30px;
+	letter-spacing:1px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+
+
