@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name= "viewport" content="width=device-width">
 </head>
-<body>
+<body id="login_body">
 	<header id="login_header"> 
 		<nav id="login_nav">
 			<form class="home_forms" action="">
@@ -18,7 +18,7 @@
 				<a id="help_button" href=""><img src="img/btn_help.png" alt=""></a>
 			</form>
 		</nav>
-		<figure><img src="img/logo.png" alt=""></figure>
+		<figure><img src="img/logo_log.png" alt=""></figure>
 		<p>¿Hasta dondé continúan las historias?</p>
 	</header>
 	<div id="login_div">
@@ -37,9 +37,9 @@
 	</div>
 	<div id="login_conten">
 		<header>
-			<figure><img src="img/logo.png" alt=""></figure>
+			<figure><img src="img/logo_log.png" alt=""></figure>
 		</header>
-		<section>
+		<div id="contenSection">
 			<article id="ultima_historia">
 				<h2>Última historia</h2>
 				<div class="area_de_texto">
@@ -89,7 +89,7 @@
 					</form>
 				</div>
 			</aside>
-		</section>
+		</div>
 	</div> 
 	</body
 	></html>
