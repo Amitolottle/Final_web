@@ -1,0 +1,749 @@
+/*Reset*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*Creacion y carga de las fuentas*/
+@font-face {
+    font-family: bebasNeue;
+    src: url(../fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: alwaysInMyHeart;
+    src: url(../fonts/Always In My Heart.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: helvetica_light;
+    src: url(../fonts/HELVETICALTSTD-LIGHT.OTF);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	 background-image: url('../img/fondo.png');
+	 margin: 0px;
+	 font-family: Bebas Neue;
+}
+header{
+	left: 0;
+	position: fixed;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+#login_body{
+background-image: none;
+background: white;
+}
+#login_body header{
+	left: inherit;
+	position: inherit;
+	top: inherit;
+}
+/*Index home login*/
+#login_header{
+	left: inherit;
+	position: inherit;
+	text-align: inherit;
+	top: inherit;
+	background-image: url("../img/fondo_1_log_movil.png");
+	background-repeat: no-repeat;
+	width: 100%;
+	text-align: center;
+	width: 100%;
+	color: white;
+}
+
+/*----------Inicio Barra de navegacion--------*/
+
+/*cambiar el color del placeholder*/
+::-webkit-input-placeholder { /* WebKit browsers */
+	font-family: helvetica_light;
+    color:    white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	font-family: helvetica_light;
+   color:    white;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	font-family: helvetica_light;
+   color:    white;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	font-family: helvetica_light;
+   color:    white;
+}
+
+.col-sm-12{
+	padding-left: 0;
+	padding-right: 0;
+}
+.col-xs-2{
+	padding: 0;
+}
+
+.row {
+margin-left: 0;
+margin-right: 0;
+}
+.col-xs-1{
+	padding-bottom: 5px;
+}
+#login_nav form{
+	font-family: helvetica_light;
+/*	padding: 15px 0 15px 0;
+	background-color:  rgba(35,35,35,0.6);
+	margin-bottom: 1%;*/
+}
+#login_nav .cont_input{
+	padding: 10px 10%;
+}
+#login_nav label{
+	margin-right: 0.5%;
+}
+#login_nav img{
+	vertical-align: middle;
+	width: 2%;
+}
+
+#login_nav label[for=user] img{
+	
+	/*width: 4%;*/
+}
+#login_nav label[for=password] img{
+
+	/*width: 1%;*/
+}
+.home_forms .cont_input{
+	background-color: rgba(255,255,255,0.3);
+	border: 1px solid rgba(0,0,0,0.2);
+}
+.home_forms input{
+	background: transparent;
+	border: 1px solid white; 
+	border-radius: 3px;
+	color: white;
+	padding: 0.5% 5px;
+	/*margin-right: 5%;
+	
+	padding: 0.5%;
+	width: 15%;*/
+	
+}
+.home_forms .cont_submit{
+	padding-left: 0;
+	padding-right: 0;
+}
+.home_forms input[type=submit]{
+	background-image: url("../img/btn_log.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	border-radius: 0;
+	font-family: bebasNeue;
+	font-size: 25px;
+	padding: 1px 1px;
+	/*min-width: 133px;
+	width: 10%;*/
+}
+
+/*----------Fin Barra de navegacion--------*/
+
+/*--------Inicio contenido del header----*/
+
+#login_header figure{
+	position: relative;
+	margin: 0 auto;
+}
+#login_header figure img{
+	width: 100%;
+}
+#login_header p{
+	font-family: bebasNeue;
+	font-size: 40px;
+	padding: 5% 0;
+	margin: 0 0;
+}
+
+
+/*------------FIN DEL HEADER---------*/
+
+/*--------Inicio Introduccion---------*/
+
+#login_div{
+	background-image: url("../img/fondo_2_log.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+
+}
+#login_div p{
+	color: black;
+	font-family: helvetica_light;
+	font-size: 18px;
+	padding: 5% 8%;
+	margin: 0 auto;
+}
+
+/*------------FIN DE LA INTRODUCCION---------*/
+
+/*------------Inicio del contenido--------*/
+#login_conten{
+	background-image: url("../img/fondo_3_log.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#login_conten header{
+	background-color: rgba(35,35,35,0.5);
+	background-image: none;
+	
+}
+#login_conten header figure{
+	margin: 0 auto;
+	padding: 1% 0 0.5% 0;
+	width: 5%;
+}
+#login_conten header figure img{
+	width: 100%;
+}
+
+#login_conten #contenSection{
+	padding: 2.5% 10%;
+}
+#ultima_historia{
+	background-color: rgba(242,85,85,0.5);
+	display: inline-block;
+	height: 100%;
+	padding: 12px;
+	width: 50%;
+	
+}
+#ultima_historia h2{
+	color: white;
+	font-family: helvetica;
+	font-size: 17px;
+	font-weight: normal;
+	padding: 2% 0 1% 1%;
+}
+#ultima_historia .area_de_texto{
+	background-image: url("../img/fondo_noticia_log.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: rgb(110,110,110);
+	font-family: helvetica_light;
+	padding: 2%;
+}
+.area_de_texto h1{
+	color: black;
+	font-family: bebasNeue;
+	font-size: 28px;
+	margin-bottom: 4%;
+}
+.area_de_texto u{
+	border-bottom: 2px solid black;
+	text-decoration: none;
+}
+
+/*---------------ASIDE---------------*/
+
+#form_registro{
+	background-image: url("../img/fondo_reg_form.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 0 22px 10px 15px;
+	
+}
+#login_conten aside h3{
+	color: white;
+	font-family: helvetica_light;
+	font-size: 22px;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+#login_conten aside input{
+	height: auto;
+	margin-bottom: 10px;
+	padding: 2% 0 2% 2%;
+	width: 100%;
+}
+#login_conten aside input[type=submit]{
+	background-image: url("../img/btn_log_2.png");
+	color: black;
+	font-size: 25px;
+	min-width: 0;
+	padding: 4px 0 4px 0;
+	width: 30%;
+}
+#login_conten select{
+	-webkit-appearance:none;
+	background: transparent;
+	background-image: url("../img/fondo_select_genero.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	color: white;
+	font-size: 20px;
+	min-width: 0;
+	padding: 2.5% 4px 2.5% 2px;
+	width: 40%;
+}
+
+#login_conten select option {
+    background:transparent;
+    color: black;
+}
+/*-------------------FIN ASIDER---------------------------*/
+/*-----------------FIN CONTENIDO--------------------------*/
+
+/**--------------------------FIN LOGIN SS-------------------------------**/
+
+/**--------------------------FIN LOGIN SS-------------------------------**/
+/**---CABECERA--**/
+#head_principal{
+	position: fixed;
+	padding-top: 0;
+	padding-bottom: 0;
+	z-index: 5;
+}
+#cabecera{
+	background: rgba(0, 0, 0, .8);
+	height: 75px;
+	padding-top: 10px;
+	width: 100%;
+}
+#cabecera h1{
+	color: white;
+	display: inline;
+	font-size: 16px;
+	padding-left: 10px;
+}
+#cabecera figure{
+	padding-left: 40px;
+}
+#foto_perfil{
+	width: 50px;
+}
+
+#cabecera nav{
+	color: white;
+	display: inline;
+	font-size: 16px;
+	padding-top: 35px;
+	}
+#cabecera ul{
+	display: inline;
+}
+#cabecera li{
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.raya {
+	border-left: 1px solid white;
+}
+
+
+/*--barra de busqueda--*/
+.col-xs-12{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.buscador{
+	background-color: rgba(250,250,250,0.7);
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+.buscador img{
+	width: 100%;
+	background:none;
+}
+.buscador figure {
+	padding: 12px;
+	padding-top: 0;
+	background:none;
+}
+.buscador input{
+	background: none;
+	border: 1px solid black;
+	border-radius: 10px;
+	height: 20px;
+}
+.btn_filtrar{
+	color: white;
+	background-color: rgba(85,185,120,0.7);
+	height: 43px;
+	padding-left: 0;
+	padding-right: 0;
+}
+.btn_filtrar select{
+	background:none;
+	border:none;
+	font-size: 20px;
+	margin-top: 10px;
+	width: 100%;
+}
+/*----------------------------------------*/
+.nombre_seccion{
+	background: rgb(186, 95, 95);
+	color: white;
+	position: fixed;
+	text-align: center;
+	top:115px;
+	width: 100%;
+	z-index: 5;
+}
+
+/**------------MENU----------------*/
+#menu{
+	background: rgba(0, 0, 0, .8);
+	bottom: 0;
+	display: inline;
+	left: 0;
+	position: fixed;
+	z-index: 5;
+}
+#menu ul{
+	display: inline;
+}
+#menu li{
+	border: 1px solid white;
+	color: white;
+	display: inline;
+	font-size: 20pt;
+	padding: 3px; 
+	text-align: center;
+}
+
+/**------------CUADRO PRINCIPAL----------------*/
+section{
+	height: 100%;
+	padding: 15px;
+	margin: 180px auto 30px auto;
+}
+
+#crear {
+	background: rgb(204, 255, 207);
+}
+/**------------FIN CUADRO PRINCIPAL----------------*/
+.escribir input{
+	font-family: Bebas Neue;
+}
+.escribir input[type="text"]{
+	appearance: none;
+	background: rgba(75, 94, 75, .5);
+	border: none;
+	color: white;
+	font-size: 25px;
+	margin-bottom: 15px;
+	padding: 8px;
+	width: 100%;
+}
+/*	left: 82%;
+	position: absolute;
+	top: 0%;
+	margin-bottom: 45px;
+}*/
+.escribir select{
+	-webkit-appearance: none;
+	background-image: url('../img/seleccionar.png');
+	border: none;
+	border-radius: 0px;
+	font-family: Bebas Neue;
+	font-size: 15px;
+	margin-right: 15px;
+	padding: 8px;
+	width: 30%;
+}
+.escribir option{
+	-webkit-appearance: none;
+	border: none;
+	border-radius: 0px;
+	background-color: red; 
+}
+.escribir textarea{
+	background-image: url('../img/textura1.png');
+	height: 300px;
+	margin-top: 15px;
+	width: 100%;
+}
+.escribir input [type="button"]{
+	border: none;
+	border-radius: 0px;
+	font-family: Bebas Neue;
+	background: rgba(0, 0, 0, .5);
+}
+.escribir h3{
+	color: white;
+	margin: 0px;
+}
+/**------------ASIDE PRINCIPAL----------------*/
+/*aside{
+	left: 80%;
+	position: fixed;
+	top: 30%;
+}
+/**------------FIN ASIDE PRINCIPAL----------------*/
+/*#barraLateral .filtro1{
+	color: white;
+	display: block;
+	font-size: 30px;
+	letter-spacing:1px;
+	margin-bottom: 10px; 
+	padding-left: 0px;
+}
+#barraLateral .filtro2{
+	color: white;
+	display: block;
+	font-size: 30px;
+	letter-spacing:1px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}*/
+
+/**------------PERFIL----------------*/
+#accesos_perfil{
+	background: rgba(255, 255, 255, .5);
+	position: fixed;
+	top:155px;
+	width: 100%;
+
+}
+
+/**------------COLABORAR----------------*/
+#colaborar{
+	background-color: #5496BA;
+	margin-top: 10px;
+}
+#colaborar textarea{
+	height: 200px;
+}
+
+/*-----------HOME-------------*/
+#contenedor_perfil{
+	color:white;
+	margin-top: 200px;
+	margin-bottom: 50px;
+}
+#contenedor_perfil .frente{
+	z-index: 3;
+}
+#contenedor_home{
+	color:white;
+	margin-top: 158px;
+}
+#contenedor_home .frente{
+	z-index: 3;
+}
+
+/*---------------ARTICULO--------------------*/
+#contenedor_home article{
+	margin: 10px auto;
+	width: 90%;
+}
+
+/*---------------ARTICULO--------------------*/
+#contenedor_perfil article{
+	margin: 10px auto;
+	width: 90%;
+}
+.cupos{
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 15px;
+}
+.cupos div{
+	background-color: #5496BA;
+}
+.cupos h5{
+	margin: 1px 0;
+ 	padding-left: 10px;
+ 	padding-right: 0;
+}
+.cupos a figure{
+	padding: 0 2px;
+}
+.cupos a figure img{
+	width: 100%;
+}
+.cupos .info{
+	margin: 5px 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.cupos .colaborar{
+margin: 5px 0;
+}
+.info_historia{
+	background-color: #5496BA;
+}
+.img_perfil{
+	position: absolute;
+	z-index: 1;
+	right: 118px;
+}
+.img_perfil figure{
+	background-color: #5496BA;
+	border-radius: 100px;
+	padding: 20px;
+}
+.img_perfil img{
+	width: 100%;
+	border: 5px solid white;
+	border-radius: 100px;
+}
+.plumas{
+	background-color: #5496BA;
+	margin-top: 45px;
+}
+.plumas a{
+	color: white;
+}
+
+.info_historia .info{
+	margin-top: 10px;
+}
+#estado_historia{
+	background-color: #98D67E;
+	border-radius: 30px;
+	margin-top: 5px;
+	margin-right: 5px;
+	height: 20px;
+}
+article .cont_info{
+	background-image: url(../img/textura1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: black;
+	margin-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+article .cont_info h1{
+	font-size: 30px;
+	margin-bottom: 5px;
+	text-decoration: underline;
+}
+article .cont_info h3{
+	font-family: helvetica;
+	font-style: italic;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+article .cont_info p{
+	margin-left: 10px;
+	font-family: helvetica;
+}
+a{
+	text-align: right;
+}
+.clasificacion{
+	padding-top: 5px;
+}
+.clasificacion figure img{
+	width: 100%;
+}
+.clasificacion .tipo_historia figure{
+	padding-top: 8px;
+	padding-left: 5px;
+	padding-right: 2px;
+}
+.clasificacion .genero_historia figure{
+	padding-left: 12px;
+	padding-right: 2px;
+	padding-top: 4px;
+}
+/*---FIN CSS DE LA SECCION DEL ARTICULO---*/
+/*---COLABORADORES---*/
+#colaboradores{
+	margin-top: 180px;
+}
+#colaboradores h4{
+	color: white;
+}
+#creador{
+	border: 10px solid #6D6FB5;
+	border-radius: 50px;
+}
+.colaborador{
+	display: inline;
+}
+.colaborador img{
+	margin-left: 8px;
+	width: 30px;
+}
+#nuevoColaborador{
+	background-color: #54BA76;
+	border: 5px solid #54BA76;
+	border-radius: 100px;
+	margin-left: 8px;
+	padding: 0px 5px;
+}
+#nuevoColaborador a{
+	color: white;
+}
+.contenedor_visual{
+	margin: 0 auto;
+	width: 100%;
+}
+.vis{
+	margin-bottom: 10px;
+}
+.comentarios{
+	color:white;
+	margin: 0 auto;
+	width: 80%;
+}
+.comentarios .publicados{
+	background-color: rgba(250,250,250,0.5); 
+	padding: 10px;
+}
+.comentarios .publicados p{
+	font-family: helvetica;
+	color:black;
+}
+.comentarios .comentar{
+margin-bottom: 60px;
+}
+.comentarios .comentar input{
+	color:black;
+}
+/*---------FIN COMENTARIOS------*/
+
+/*---CSS NOTIFICACIONES----*/
+#contenedor_notificacion{
+	background-color: rgba(0,0,0,0.5);
+	margin: 135px 15px 50px 15px;
+	padding: 15px;
+}
+#contenedor_notificacion article{
+	background-image: url(../img/textura1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: 2px solid #6062D6; 
+	position: relative;
+}
+#contenedor_notificacion article .imagen_user{
+padding: 10px;
+}
+#contenedor_notificacion article p{
+	font-family: helvetica;
+	padding-right: 0;
+}
+.marcador{
+	bottom: 0;
+	padding: 0;
+	position: absolute;
+	right: 0;
+}
+
