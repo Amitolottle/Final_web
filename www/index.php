@@ -25,14 +25,14 @@
      <figure class="col-xs-8"><img src="img/logo_log.png" alt=""></figure>
      <div class="col-xs-2"></div>
     <nav id="login_nav" class="col-sm-12">
-      <form class="home_forms col-sm-12" action="home.php">
+      <form class="home_forms col-sm-12" action="includes/validarUsuario.php" method="POST">
         <div class="cont_input col-xs-12">
         <figure class="col-xs-2"><img src="img/user_log_icon.png" alt=""></figure>
-        <input class="col-xs-10" type="text" name="user" placeholder="Correo">
+        <input class="col-xs-10" type="text" name="correo" placeholder="Correo">
         </div>
         <div class="cont_input col-xs-12">
         <figure class="col-xs-2"><img src="img/password_log_icon.png" alt=""></figure>
-        <input class="col-xs-10" type="text" name="password" placeholder="Contraseña">
+        <input class="col-xs-10" type="text" name="pw" placeholder="Contraseña">
         </div>
         <div class="cont_submit col-xs-12">
         <input class="col-xs-12" type="submit" value="INICIAR SESIÓN">
@@ -74,17 +74,17 @@
       <aside class="row">
         <div id="form_registro">
           <h3>Registrarse</h3>
-          <form class="home_forms" action="">
-            <input type="text" name="user" placeholder="Correo">
-            <input type="text" name="password" placeholder="Contraseña">
-            <input type="text" name="user" placeholder="Correo">
-            <input type="text" name="password" placeholder="Contraseña">
+          <form class="home_forms" action="includes/registrarUsuario.php" method="POST">
+            <input type="text" name="nombres" placeholder="Nombre de usuario">
+            <input type="text" name="correo" placeholder="Correo Electrónico">
+            <input type="text" name="pw" placeholder="Contraseña">
+            <input type="text" name="confirmarPw" placeholder="Confirmar Contraseña">
             <input type="date" name="fecha">
             <select name="genero" placeholder="Genero">
               <option value="hombre">Hombre</option>
               <option value="mujer">Mujer</option>
             </select>
-            <input type="submit" value="ACCEDER">
+            <input type="submit" value="Registrar">
           </form>
         </div>
       </aside>

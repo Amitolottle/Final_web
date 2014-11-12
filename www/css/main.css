@@ -39,6 +39,10 @@ header{
 	z-index: 3;
 }
 
+p{
+	max-width: 100%;
+}
+
 #login_body{
 background-image: none;
 background: white;
@@ -282,7 +286,7 @@ margin-right: 0;
 	font-size: 25px;
 	min-width: 0;
 	padding: 4px 0 4px 0;
-	width: 30%;
+	width: 40%;
 }
 #login_conten select{
 	-webkit-appearance:none;
@@ -325,6 +329,7 @@ margin-right: 0;
 	color: white;
 	display: inline;
 	font-size: 16px;
+	margin-top: 4%;
 	padding-left: 10px;
 }
 #cabecera figure{
@@ -338,14 +343,14 @@ margin-right: 0;
 	color: white;
 	display: inline;
 	font-size: 16px;
-	padding-top: 35px;
+	padding-top: 19px;
 	}
 #cabecera ul{
-	display: inline;
+	display: inline-block;
 }
 #cabecera li{
-	display: inline;
-	padding-left: 10px;
+	display: inline-block;
+	padding-left: 4px;
 	padding-right: 10px;
 }
 .raya {
@@ -517,6 +522,7 @@ section{
 	position: fixed;
 	top:155px;
 	width: 100%;
+	z-index: 5;
 
 }
 
@@ -562,15 +568,28 @@ section{
 	padding-right: 0;
 	margin-top: 15px;
 }
-.cupos div{
-	background-color: #5496BA;
+
+#contenedor_perfil .cupos{
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 42px;
 }
+
+/*.cupos div{
+	background-color: #5496BA;
+}*/
+
 .cupos h5{
-	margin: 1px 0;
- 	padding-left: 10px;
- 	padding-right: 0;
+margin: 1px 0;
+padding-bottom: 4%;
+margin-top: 7%;
+padding-left: 10px;
+padding-right: 0;
+width: 62%;
 }
 .cupos a figure{
+	margin-left: 16%;
+	margin-top: 4%;
 	padding: 0 2px;
 }
 .cupos a figure img{
@@ -580,20 +599,27 @@ section{
 	margin: 5px 0;
 	padding-left: 0;
 	padding-right: 0;
+	width: 72%;
 }
 .cupos .colaborar{
 margin: 5px 0;
+width: 78%;
 }
 .info_historia{
 	background-color: #5496BA;
 }
 .img_perfil{
+	margin-top: 7%;
 	position: absolute;
-	z-index: 1;
 	right: 118px;
+	z-index: 1;
+}
+
+#contenedor_perfil .img_perfil{
+	margin-top: 5%;
 }
 .img_perfil figure{
-	background-color: #5496BA;
+	/*background-color: #5496BA;*/
 	border-radius: 100px;
 	padding: 20px;
 }
@@ -604,10 +630,19 @@ margin: 5px 0;
 }
 .plumas{
 	background-color: #5496BA;
-	margin-top: 45px;
+	margin-top: 71px;
+}
+
+#contenedor_perfil .plumas{
+	margin-top: 64px;
 }
 .plumas a{
 	color: white;
+	margin-left: 16%;
+}
+
+.plumas figure{
+	margin-left: -14%;
 }
 
 .info_historia .info{
@@ -630,22 +665,24 @@ article .cont_info{
 	padding-right: 15px;
 }
 article .cont_info h1{
-	font-size: 30px;
+	font-size: 23px;
 	margin-bottom: 5px;
-	text-decoration: underline;
 }
 article .cont_info h3{
 	font-family: helvetica;
 	font-style: italic;
+	font-size: 18px;
 	margin-top: 10px;
 	margin-bottom: 5px;
 }
 article .cont_info p{
 	margin-left: 10px;
+	max-width: 100%;
 	font-family: helvetica;
 }
 a{
 	text-align: right;
+	text-decoration: none;
 }
 .clasificacion{
 	padding-top: 5px;
@@ -672,8 +709,15 @@ a{
 	color: white;
 }
 #creador{
-	border: 10px solid #6D6FB5;
+	border: 10px solid #5496BA;
 	border-radius: 50px;
+	margin-bottom: 60%;
+	margin-left: -60%;
+	width: 230%;
+}
+
+.colaboradoresIN{
+	margin-top: -3%;
 }
 .colaborador{
 	display: inline;
@@ -694,6 +738,7 @@ a{
 }
 .contenedor_visual{
 	margin: 0 auto;
+	margin-bottom: 4%;
 	width: 100%;
 }
 .vis{
@@ -702,21 +747,32 @@ a{
 .comentarios{
 	color:white;
 	margin: 0 auto;
-	width: 80%;
+	width: 91%;
 }
 .comentarios .publicados{
 	background-color: rgba(250,250,250,0.5); 
+	margin-bottom: 10%;
 	padding: 10px;
 }
 .comentarios .publicados p{
 	font-family: helvetica;
 	color:black;
 }
+
+.comentarios .publicados figure{
+	padding-left: 1%;
+}
 .comentarios .comentar{
 margin-bottom: 60px;
 }
 .comentarios .comentar input{
 	color:black;
+}
+.comentarios .comentar textarea{
+	color:black;
+}
+.comments-wrapper .comment-body p, .comments-wrapper .squarespace-comments .new-comment-area .input form.comment-form textarea {
+   color: #000;
 }
 /*---------FIN COMENTARIOS------*/
 
@@ -745,5 +801,34 @@ padding: 10px;
 	padding: 0;
 	position: absolute;
 	right: 0;
+}
+
+/*---CSS COLORES----*/
+.Romance{
+	background-color: #e07777;
+}
+
+.Comedia{
+	background-color: #5496BA;
+}
+
+.Fantasia{
+	background-color: #51a7ad;
+}
+
+.Ficcion{
+	background-color: #5151ad;
+}
+
+.Horror{
+	background-color: #3b3b3b;
+}
+
+.Random{
+	background-color: #85ad1f;
+}
+
+.Drama{
+	background-color: #1fad91;
 }
 

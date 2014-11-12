@@ -1,3 +1,5 @@
+<!-- Inicio sesión de nuevo para acceder al dato del ID ya almacenado -->
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -19,14 +21,25 @@
 	<header id="head_principal">
     	<div id='cabecera'>
       		<figure class="col-xs-1">
-        		<img id="foto_perfil" src= "img/kammil.png"> 
+        		<?php
+            include_once("includes/database.php");
+            $sql="SELECT usuarios.nombre AS nombre, usuarios.id AS idUsuario, usuarios.rutaImg AS imagen  FROM Continuara.usuarios WHERE usuarios.id='". $_SESSION["username"]."'";
+            $resultado=mysqli_query($con,$sql);
+
+            while ($row= mysqli_fetch_array($resultado)) {
+               echo"<img id='foto_perfil' src=".$row["imagen"].">"; 
+              ?>
       		</figure>
       		<div class="col-xs-1"></div>
-      		<h1 class="col-xs-3">KAMMIL CARRANZA</h1>
+      		 <?php
+              
+              echo"<h1 class='col-xs-3'>".$row["nombre"]."</h1>";
+            }
+              ?>
       		<nav class="col-xs-6">
         		<ul>
         			<li>0 NOTIFICACIONES</li>
-          			<li class='raya'>SALIR</li>
+          		 <a href="includes/terminarSesion.php"><li class='raya'>SALIR</li></a>
        			</ul>
       		</nav>
     	</div>

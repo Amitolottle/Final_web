@@ -1,3 +1,5 @@
+<!-- Inicio sesión de nuevo para acceder al dato del ID ya almacenado -->
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -16,17 +18,42 @@
 	  <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
 	<body>
+  <?php
+include_once("includes/database.php");
+if(isset($_GET["idHistoria"])){  
+  $idAlmacenado= $_GET["idHistoria"];
+  $sqlValidacion= "SELECT historias.id FROM Continuara.historias WHERE historias.idUsuario='".$_SESSION["username"]."' AND historias.id='".$idAlmacenado."'";
+  $resValidacion=mysqli_query($con,$sqlValidacion);
+  if(mysqli_num_rows($resValidacion)>0){
+    //$sql="INSERT INTO Continuara.plumas(`idUsuario`, `idHistoria`) VALUES ('".$_SESSION["username"]."','$idAlmacenado')";
+    //$comunicacion=mysqli_query($con,$sql);
+    echo"<h1>NO PUEDES CONTRIBUIR A TU MISMA HISTORIA!</h1>";
+    echo"<meta http-equiv='refresh' content='4;url=home.php'>";
+  }else{
+   ?>
+    
 		<header id="head_principal">
       		<div id='cabecera'>
       			<figure class="col-xs-1">
-        			<img id="foto_perfil" src= "img/kammil.png"> 
-      			</figure>
-      			<div class="col-xs-1"></div>
-      			<h1 class="col-xs-3">KAMMIL CARRANZA</h1>
+        			 <?php
+            $sql="SELECT usuarios.nombre AS nombre, usuarios.id AS idUsuario, usuarios.rutaImg AS imagen  FROM Continuara.usuarios WHERE usuarios.id='". $_SESSION["username"]."'";
+            $resultado=mysqli_query($con,$sql);
+
+            while ($row= mysqli_fetch_array($resultado)) {
+               echo"<img id='foto_perfil' src=".$row["imagen"].">"; 
+              ?>
+       
+      </figure>
+      <div class="col-xs-1"></div>
+      <?php
+              
+              echo"<h1 class='col-xs-3'>".$row["nombre"]."</h1>";
+            }
+              ?>
       			<nav class="col-xs-6">
         			<ul>
         			  <li>0 NOTIFICACIONES</li>
-        			  <li class='raya'>SALIR</li>
+        			  <a href="includes/terminarSesion.php"><li class='raya'>SALIR</li></a>
         			</ul>
       			</nav>
       		</div>
@@ -55,10 +82,18 @@
     		<h4>NUEVAS HISTORIAS</h4>
     	</div>
     	<div class='row' id='contenedor_home'>
+      <?php
+      $sqlHistorias= "SELECT historias.id AS idHistoria, historias.cupos AS cupos, historias.imgCreador AS imagen, historias.tiempo AS tiempo, historias.titulo AS titulo, 
+      historias.creador AS creador, historias.tipo AS tipo, historias.categoria AS categoria FROM Continuara.historias WHERE historias.id=".$idAlmacenado." ";
+      $resHistorias= mysqli_query($con,$sqlHistorias);
+      while($rowHistorias=mysqli_fetch_array($resHistorias)){
+      ?>
        <article class="row">
         <div class="cupos col-xs-4">
           <div class="frente info col-xs-11">
-            <h5>2 cupos disponibles</h5>
+          <?php 
+           echo"<h5>".$rowHistorias["cupos"]." cupos disponibles</h5>";
+            ?>
           </div>
 
           <div class="colaborar col-xs-12">
@@ -69,10 +104,17 @@
         </div>
         <div class="col-xs-4"></div>
         <div class="img_perfil col-xs-5">
-          <figure><img src="img/alegria.png" alt=""></figure>
+        <?php
+         echo"<figure><img src=".$rowHistorias["imagen"]." alt=''></figure>";
+          ?>
         </div>
         <div class="frente plumas col-xs-4">
-          <a href=""><figure class="col-xs-2"><img src="img/pluma_icon.png" alt=""></figure>28 plumas</a>
+        <?php
+           $sqlPlumas="SELECT plumas.id FROM Continuara.plumas WHERE plumas.idHistoria='".$rowHistorias["idHistoria"]."'";
+        $resPlumas=mysqli_query($con,$sqlPlumas);
+        $filasPlumas=mysqli_num_rows($resPlumas);
+          echo"<a href='includes/agregarPluma.php?idHistoria=".$rowHistorias["idHistoria"]."'><figure class='col-xs-2'><img src='img/pluma_icon.png' alt=''></figure>".$filasPlumas." plumas</a>";
+          ?>
         </div>
         <div class="info_historia col-xs-12">
           <div class="frente info col-xs-5">
@@ -81,31 +123,43 @@
           </div>
           <div class="col-xs-2"></div>
           <div class="frente info col-xs-5">
-            <h5>tiempo restante: 00:20:34</h5>
+            <?php
+             echo"<h5>tiempo restante: ".$rowHistorias["tiempo"]."</h5>";
+            ?>
           </div>
           
           <div class="col-xs-12 clasificacion">
           <div class="col-xs-2"></div>
           <div class="col-xs-4 tipo_historia">
             <figure class="col-xs-4"><img src="img/cuento_icon.png" alt=""></figure>
-            <h5 class="col-xs-8">cuento</h5> 
+            <?php
+            echo"<h5 class='col-xs-8'>".$rowHistorias["tipo"]."</h5> ";
+            ?>
           </div>
           <div class="col-xs-4 genero_historia">
             <figure class="col-xs-4"><img src="img/comedia_icon.png" alt=""></figure>
-            <h5 class="col-xs-8">comedia</h5> 
+            <?php
+            echo"<h5 class='col-xs-8'>".$rowHistorias["categoria"]."</h5> ";
+            ?>
           </div>
           <div class="col-xs-2"></div>
         </div>
         </div>
       </article>
+      <?php
+    }
+    ?>
     	<div class="col-xs-1"></div>
 		<section class='col-xs-10'id='colaborar'>
-			<form class='escribir'>
+			<form class='escribir' action="includes/agregarContribucion.php" method="POST">
 				<!--<img id='pluma' src= "img/pluma.png"> -->
 				<h3>CONTRIBUCIÓN</h3>
-				<textarea></textarea>
+        <?php
+        echo"<input type='hidden' name='idHistoriaActual' value='".$idAlmacenado."'>";
+        ?>
+				<textarea name="contenidoCon"></textarea>
 				<div class="col-xs-10"></div>
-				<input class="col-xs-2" type="button" value="PUBLICAR">
+				<input class="col-xs-2" type="submit" value="Publicar">
 			</form>
 		</section>
 		<nav class="col-xs-12" id='menu'>
@@ -115,6 +169,12 @@
           <a href="crear.php"><li class="col-xs-4">CREAR</li></a>
         	</ul>
       	</nav>
+        <?php
+       }
+  
+}
+?>
+      
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
           <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 

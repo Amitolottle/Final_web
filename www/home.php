@@ -1,3 +1,5 @@
+<!-- Inicio sesión de nuevo para acceder al dato del ID ya almacenado -->
+<?php session_start(); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -25,14 +27,28 @@
      <header id="head_principal">
       <div id='cabecera'>
       <figure class="col-xs-1">
-        <img id="foto_perfil" src= "img/kammil.png"> 
+       <?php
+            include_once("includes/database.php");
+            $sql="SELECT usuarios.nombre AS nombre, usuarios.id AS idUsuario, usuarios.rutaImg AS imagen  FROM Continuara.usuarios WHERE usuarios.id='". $_SESSION["username"]."'";
+            $resultado=mysqli_query($con,$sql);
+
+            while ($row= mysqli_fetch_array($resultado)) {
+               echo"<img id='foto_perfil' src=".$row["imagen"].">"; 
+              ?>
+       
       </figure>
       <div class="col-xs-1"></div>
-      <h1 class="col-xs-3">KAMMIL CARRANZA</h1>
+      <?php
+              
+              echo"<h1 class='col-xs-3'>".$row["nombre"]."</h1>";
+            }
+              ?>
+
+      
       <nav class="col-xs-6">
         <ul>
           <li>0 NOTIFICACIONES</li>
-          <li class='raya'>SALIR</li>
+          <a href="includes/terminarSesion.php"><li class='raya'>SALIR</li></a>
         </ul>
       </nav>
       </div>
@@ -64,112 +80,77 @@
 
       <!--Articulo que corresponde a una historia, tiene la informacion
       del creador y la informacion general de la historias-->
-      <article class="row">
-        <div class="cupos col-xs-4">
-          <div class="frente info col-xs-11">
-            <h5>2 cupos disponibles</h5>
-          </div>
+      <?php 
+      include_once("includes/database.php");
+      $sqlHistorias= "SELECT historias.id AS idHistoria, historias.cupos AS cupos, historias.imgCreador AS imagen, historias.tiempo AS tiempo, historias.titulo AS titulo, 
+      historias.creador AS creador, historias.contenido AS contenido, historias.tipo AS tipo, historias.categoria AS categoria FROM Continuara.historias ";
+      $resHistorias= mysqli_query($con,$sqlHistorias);
+      while($rowHistorias=mysqli_fetch_array($resHistorias)){
 
-          <div class="colaborar col-xs-12">
-            <h5 class="frente col-xs-8">Colaborar</h5>
-            <a href=""><figure class="col-xs-2"><img src="img/btn_mas.png" alt=""></figure></a>
-            <div class="col-xs-2"></div>
-          </div>
-        </div>
-        <div class="col-xs-4"></div>
-        <div class="img_perfil col-xs-5">
-          <figure><img src="img/alegria.png" alt=""></figure>
-        </div>
-        <div class="frente plumas col-xs-4">
-          <a href=""><figure class="col-xs-2"><img src="img/pluma_icon.png" alt=""></figure>28 plumas</a>
-        </div>
-        <div class="info_historia col-xs-12">
-          <div class="frente info col-xs-5">
-            <div id="estado_historia" class="col-xs-2"></div>
-            <h5>Historia en curso</h5>
-          </div>
-          <div class="col-xs-2"></div>
-          <div class="frente info col-xs-5">
-            <h5>tiempo restante: 00:20:34</h5>
-          </div>
-          <div class="cont_info col-xs-12">
-            <h1>Nueva historia por: veronica</h1>
-            <h3>Voronica:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-              Dignissimos doloribus totam, nobis inventore cumque ut 
-              perspiciatis incidunt odio non natus placeat ratione, 
-              quisquam nostrum ex sit iure explicabo magni officiis!
-            </p>
-            <div class="col-xs-10"></div>
-            <a class="col-xs-2" href="">Ver más</a>
-          </div>
-          <div class="col-xs-12 clasificacion">
-          <div class="col-xs-2"></div>
-          <div class="col-xs-4 tipo_historia">
-            <figure class="col-xs-4"><img src="img/cuento_icon.png" alt=""></figure>
-            <h5 class="col-xs-8">cuento</h5> 
-          </div>
-          <div class="col-xs-4 genero_historia">
-            <figure class="col-xs-4"><img src="img/comedia_icon.png" alt=""></figure>
-            <h5 class="col-xs-8">comedia</h5> 
-          </div>
-          <div class="col-xs-2"></div>
-        </div>
-        </div>
-      </article>
-       <article class="row">
-        <div class="cupos col-xs-4">
-          <div class="frente info col-xs-11">
-            <h5>2 cupos disponibles</h5>
-          </div>
 
-          <div class="colaborar col-xs-12">
-            <h5 class="frente col-xs-8">Colaborar</h5>
-            <a href=""><figure class="col-xs-2"><img src="img/btn_mas.png" alt=""></figure></a>
-            <div class="col-xs-2"></div>
-          </div>
-        </div>
-        <div class="col-xs-4"></div>
-        <div class="img_perfil col-xs-5">
-          <figure><img src="img/alegria.png" alt=""></figure>
-        </div>
-        <div class="frente plumas col-xs-4">
-          <a href=""><figure class="col-xs-2"><img src="img/pluma_icon.png" alt=""></figure>28 plumas</a>
-        </div>
-        <div class="info_historia col-xs-12">
-          <div class="frente info col-xs-5">
-            <div id="estado_historia" class="col-xs-2"></div>
-            <h5>Historia en curso</h5>
-          </div>
-          <div class="col-xs-2"></div>
-          <div class="frente info col-xs-5">
-            <h5>tiempo restante: 00:20:34</h5>
-          </div>
-          <div class="cont_info col-xs-12">
-            <h1>Nueva historia por: veronica</h1>
-            <h3>Voronica:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-              Dignissimos doloribus totam, nobis inventore cumque ut 
-              perspiciatis incidunt odio non natus placeat ratione, 
-              quisquam nostrum ex sit iure explicabo magni officiis!
-            </p>
-            <div class="col-xs-10"></div>
-            <a class="col-xs-2" href="">Ver más</a>
-          </div>
-          <div class="col-xs-12 clasificacion">
-          <div class="col-xs-2"></div>
-          <div class="col-xs-4 tipo_historia">
-            <figure class="col-xs-4"><img src="img/cuento_icon.png" alt=""></figure>
-            <h5 class="col-xs-8">cuento</h5> 
-          </div>
-          <div class="col-xs-4 genero_historia">
-            <figure class="col-xs-4"><img src="img/comedia_icon.png" alt=""></figure>
-            <h5 class="col-xs-8">comedia</h5> 
-          </div>
-          <div class="col-xs-2"></div>
-        </div>
-        </div>
-      </article>
+      echo"<article class='row'>";
+        echo"<div class='cupos col-xs-4'>";
+          echo"<div class='frente info col-xs-11 ".$rowHistorias["categoria"]."'>";
+            echo"<h5>".$rowHistorias["cupos"]." cupos disponibles</h5>";
+          echo"</div>";
+
+          echo"<div class='colaborar col-xs-12 ".$rowHistorias["categoria"]."'>";
+            echo"<h5 class='frente col-xs-8'>Colaborar</h5>";
+            echo"<a href='includes/validarContribucion.php?idHistoria=".$rowHistorias["idHistoria"]."'><figure class='col-xs-2'><img src='img/btn_mas.png' alt=''></figure></a>";
+            echo"<div class='col-xs-2'></div>";
+          echo"</div>";
+        echo"</div>";
+        echo"<div class='col-xs-4'></div>";
+        echo"<div class='img_perfil col-xs-5'>";
+          echo"<figure class='".$rowHistorias["categoria"]."'><img src=".$rowHistorias["imagen"]." alt=''></figure>";
+        echo"</div>";
+        echo"<div class='frente plumas col-xs-4 ".$rowHistorias["categoria"]."'>";
+        $sqlPlumas="SELECT plumas.id FROM Continuara.plumas WHERE plumas.idHistoria='".$rowHistorias["idHistoria"]."'";
+        $resPlumas=mysqli_query($con,$sqlPlumas);
+        $filasPlumas=mysqli_num_rows($resPlumas);
+          echo"<a href='includes/agregarPluma.php?idHistoria=".$rowHistorias["idHistoria"]."'><figure class='col-xs-2'><img src='img/pluma_icon.png' alt=''></figure>".$filasPlumas." plumas</a>";
+        echo"</div>";
+        echo"<div class='info_historia col-xs-12 ".$rowHistorias["categoria"]."'>";
+          echo"<div class='frente info col-xs-5'>";
+            echo"<div id='estado_historia' class='col-xs-2'></div>";
+            echo"<h5>Historia en curso</h5>";
+          echo"</div>";
+          echo"<div class='col-xs-2'></div>";
+          echo"<div class='frente info col-xs-5'>";
+            echo"<h5>tiempo restante: ".$rowHistorias["tiempo"]."</h5>";
+          echo"</div>";
+          echo"<div class='cont_info col-xs-12'>";
+            echo"<h1>".$rowHistorias["titulo"].", por: ".$rowHistorias["creador"]."</h1>";
+
+            echo"<h3>".$rowHistorias["creador"].":</h3>";
+            echo"<p>".$rowHistorias["contenido"]."</p>";
+
+            $sqlColaboraciones="SELECT colaboraciones.contenido AS colaboracion, usuarios.nombre AS colaborante FROM Continuara.colaboraciones JOIN Continuara.usuarios
+            ON colaboraciones.idUsuario=usuarios.id WHERE colaboraciones.idHistoria=".$rowHistorias["idHistoria"]."";
+            $resColaboraciones=mysqli_query($con,$sqlColaboraciones);
+            while ($rowColaboraciones=mysqli_fetch_array($resColaboraciones)) {
+              echo"<h3>".$rowColaboraciones["colaborante"].":</h3>";
+              echo"<p>".$rowColaboraciones["colaboracion"]."</p>";
+            }
+            echo"<div class='col-xs-10'></div>";
+            echo"<a class='col-xs-2' href='visualizacion.php?idHistoria=".$rowHistorias["idHistoria"]."'>Ver más</a>";
+          echo"</div>";
+          echo"<div class='col-xs-12 clasificacion'>";
+          echo"<div class='col-xs-2'></div>";
+          echo"<div class='col-xs-4 tipo_historia'>";
+            echo"<figure class='col-xs-4'><img src='img/cuento_icon.png' alt=''></figure>";
+            echo"<h5 class='col-xs-8'>".$rowHistorias["tipo"]."</h5> ";
+          echo"</div>";
+          echo"<div class='col-xs-4 genero_historia'>";
+           echo" <figure class='col-xs-4'><img src='img/comedia_icon.png' alt=''></figure>";
+            echo"<h5 class='col-xs-8'>".$rowHistorias["categoria"]."</h5> ";
+          echo"</div>";
+          echo"<div class='col-xs-2'></div>";
+        echo"</div>";
+        echo"</div>";
+      echo"</article>";
+      }
+ ?>
       
     </div>
     
