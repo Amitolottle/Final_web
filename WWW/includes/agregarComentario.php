@@ -1,12 +1,4 @@
 <?php session_start(); ?>
-<html>
-<head>
-    <title>Registrando usuario</title>
-    <meta charset="UTF-8">
-</head>
-
-
-<body>
     <?php
     $idHistoria =$_POST["idHistoriaActual"];
     $contenido =$_POST["contenidoCom"];
@@ -16,4 +8,3 @@
 $resComentario=mysqli_query($con,$sqlComentario);
        echo"<meta http-equiv='refresh' content='0.5;url=/Final/visualizacion.php?idHistoria=".$idHistoria."'>";
 ?>
-</body></html>

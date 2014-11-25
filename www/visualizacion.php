@@ -179,11 +179,11 @@ while($rowHistorias=mysqli_fetch_array($resHistorias)){
  <div class="comentar row">
   <figure class="col-xs-3"><img src="img/kammil.png"></figure>
   <div class="col-xs-9">
-    <form  action="includes/agregarComentario.php" method="POST">
+    <form  id="dejarComent"  method="POST">
      <?php
-     echo"<input type='hidden' name='idHistoriaActual' value='".$idAlmacenado."'>";
+     echo"<input id='idHistoriaActual' type='hidden' name='idHistoriaActual' value='".$idAlmacenado."'>";
      ?>
-     <textarea name="contenidoCom" class="col-xs-12"></textarea>
+     <textarea id="contenidoCom" name="contenidoCom" class="col-xs-12"></textarea>
      <div class="col-xs-12">
        <input type="submit" value="Comentar">
      </div>

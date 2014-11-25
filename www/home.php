@@ -48,7 +48,7 @@
       <nav class="col-xs-6">
         <ul>
           <li>0 NOTIFICACIONES</li>
-          <a href="includes/terminarSesion.php"><li class='raya'>SALIR</li></a>
+          <a id="salir" href="#"><li class='raya'>SALIR</li></a>
         </ul>
       </nav>
       </div>
@@ -86,7 +86,7 @@
       historias.creador AS creador, historias.contenido AS contenido, historias.tipo AS tipo, historias.categoria AS categoria FROM Continuara.historias ";
       $resHistorias= mysqli_query($con,$sqlHistorias);
       while($rowHistorias=mysqli_fetch_array($resHistorias)){
-
+        
 
       echo"<article class='row'>";
         echo"<div class='cupos col-xs-4'>";
@@ -108,7 +108,8 @@
         $sqlPlumas="SELECT plumas.id FROM Continuara.plumas WHERE plumas.idHistoria='".$rowHistorias["idHistoria"]."'";
         $resPlumas=mysqli_query($con,$sqlPlumas);
         $filasPlumas=mysqli_num_rows($resPlumas);
-          echo"<a href='includes/agregarPluma.php?idHistoria=".$rowHistorias["idHistoria"]."'><figure class='col-xs-2'><img src='img/pluma_icon.png' alt=''></figure>".$filasPlumas." plumas</a>";
+
+          echo"<a id='".$rowHistorias["idHistoria"]."' class='linkHist' href='#'><figure class='col-xs-2'><img src='img/pluma_icon.png' alt=''></figure>".$filasPlumas." plumas</a>";
         echo"</div>";
         echo"<div class='info_historia col-xs-12 ".$rowHistorias["categoria"]."'>";
           echo"<div class='frente info col-xs-5'>";
