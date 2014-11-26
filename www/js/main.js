@@ -80,7 +80,29 @@ $(document).ready(function(){
 		})
 	});
 
+	$("#selecciones").change(function(){
+		
+		//event.preventDefault();
+		var value = $(this).val();
+		//console.log(value);
+		switch(value){
+			case "nuevas historias":
+ 				$("#todoContenido").empty();
+			break;
+			case "":
+ 				//$("#todoContenido").empty();
+			break;
+			case "nuevas historias":
+ 				//$("#todoContenido").empty();
+			break;
+		}
+		
+
+		
+	});
+
 	$( ".linkHist" ).click(function( event ) {
+
 		console.log("ID Historia: "+this.id);
 		var idHis=this.id;
 		event.preventDefault();

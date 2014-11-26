@@ -58,9 +58,9 @@
            <input  class="buscador col-xs-10"type="text">
           </div>
           <div class="btn_filtrar col-xs-3">
-              <select>
+              <select id="selecciones">
                 <option>FILTRAR</option>
-                <option value = "nuevas historias">NUEVAS HISTORIAS</option>
+                <option class="nh1" value = "nuevas historias">NUEVAS HISTORIAS</option>
                 <option value = "genero">GÉNERO</option>
                 <option value = "categoria">CATEGORIA</option>
                 <option value = "tiempo">TIEMPO</option>
@@ -80,6 +80,7 @@
 
       <!--Articulo que corresponde a una historia, tiene la informacion
       del creador y la informacion general de la historias-->
+      <div id="todoContenido">
       <?php 
       include_once("includes/database.php");
       $sqlHistorias= "SELECT historias.id AS idHistoria, historias.cupos AS cupos, historias.imgCreador AS imagen, historias.tiempo AS tiempo, historias.titulo AS titulo, 
@@ -152,7 +153,7 @@
       echo"</article>";
       }
  ?>
-      
+      </div>
     </div>
     
     <nav class="col-xs-12" id='menu'>
@@ -168,8 +169,8 @@
           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
           <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-          <script src="js/vendor/bootstrap.min.js"></script>
+          <script src="js/vendor/bootstrap.min.js"/></script>
 
-          <script src="js/main.js"></script>
+          <script src="js/main.js"/></script>
         </body>
         </html>
