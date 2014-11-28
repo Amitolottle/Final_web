@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$(".popUpNotificacion").hide();
 	$( "#login" ).submit(function( event ) {
 		console.log("FUNCA");
 		var user=$("#correoLogin").val();
@@ -853,6 +854,7 @@ $( "#crearHist" ).submit(function( event ) {
 
 	})
 });
+
 $("#notificacion" ).click(function( event ) {
 	console.log("FuncionNotificacion");
 	event.preventDefault();

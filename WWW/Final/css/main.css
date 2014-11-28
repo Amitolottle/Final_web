@@ -6,28 +6,28 @@
 
 /*Creacion y carga de las fuentas*/
 @font-face {
-    font-family: bebasNeue;
-    src: url(../fonts/BebasNeue.otf);
-    font-weight: normal;
-    font-style: normal;
+	font-family: bebasNeue;
+	src: url(../fonts/BebasNeue.otf);
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: alwaysInMyHeart;
-    src: url(../fonts/Always In My Heart.ttf);
-    font-weight: normal;
-    font-style: normal;
+	font-family: alwaysInMyHeart;
+	src: url(../fonts/Always In My Heart.ttf);
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: helvetica_light;
-    src: url(../fonts/HELVETICALTSTD-LIGHT.OTF);
-    font-weight: normal;
-    font-style: normal;
+	font-family: helvetica_light;
+	src: url(../fonts/HELVETICALTSTD-LIGHT.OTF);
+	font-weight: normal;
+	font-style: normal;
 }
 
 body{
-	 background-image: url('../img/fondo.png');
-	 margin: 0px;
-	 font-family: Bebas Neue;
+	background-image: url('../img/fondo.png');
+	margin: 0px;
+	font-family: Bebas Neue;
 }
 header{
 	left: 0;
@@ -44,8 +44,8 @@ p{
 }
 
 #login_body{
-background-image: none;
-background: white;
+	background-image: none;
+	background: white;
 }
 #login_body header{
 	left: inherit;
@@ -59,11 +59,13 @@ background: white;
 	text-align: inherit;
 	top: inherit;
 	background-image: url("../img/fondo_1_log_movil_prueba.png");
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	width: 100%;
 	text-align: center;
 	width: 100%;
 	color: white;
+	padding: 0;
 }
 
 /*----------Inicio Barra de navegacion--------*/
@@ -71,21 +73,21 @@ background: white;
 /*cambiar el color del placeholder*/
 ::-webkit-input-placeholder { /* WebKit browsers */
 	font-family: helvetica_light;
-    color:    white;
+	color:    white;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	font-family: helvetica_light;
-   color:    white;
-   opacity:  1;
+	color:    white;
+	opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
 	font-family: helvetica_light;
-   color:    white;
-   opacity:  1;
+	color:    white;
+	opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
 	font-family: helvetica_light;
-   color:    white;
+	color:    white;
 }
 
 .col-sm-12{
@@ -97,8 +99,8 @@ background: white;
 }
 
 .row {
-margin-left: 0;
-margin-right: 0;
+	margin-left: 0;
+	margin-right: 0;
 }
 .col-xs-1{
 	padding-bottom: 5px;
@@ -178,7 +180,17 @@ margin-right: 0;
 	padding: 5% 0;
 	margin: 0 0;
 }
+#login_nav{
+	height: 57px;
+}
 
+#login_nav figure{
+	width: 10%;
+}
+
+#login_nav figure img{
+	width: 100%;
+}
 
 /*------------FIN DEL HEADER---------*/
 
@@ -303,8 +315,8 @@ margin-right: 0;
 }
 
 #login_conten select option {
-    background:transparent;
-    color: black;
+	background:transparent;
+	color: black;
 }
 /*-------------------FIN ASIDER---------------------------*/
 /*-----------------FIN CONTENIDO--------------------------*/
@@ -344,7 +356,7 @@ margin-right: 0;
 	display: inline;
 	font-size: 16px;
 	padding-top: 19px;
-	}
+}
 #cabecera ul{
 	display: inline-block;
 }
@@ -456,41 +468,41 @@ section{
 	position: absolute;
 	top: 0%;
 	margin-bottom: 45px;
-}*/
-.escribir select{
-	-webkit-appearance: none;
-	background-image: url('../img/seleccionar.png');
-	border: none;
-	border-radius: 0px;
-	font-family: Bebas Neue;
-	font-size: 15px;
-	margin-right: 15px;
-	padding: 8px;
-	width: 30%;
-}
-.escribir option{
-	-webkit-appearance: none;
-	border: none;
-	border-radius: 0px;
-	background-color: red; 
-}
-.escribir textarea{
-	background-image: url('../img/textura1.png');
-	height: 300px;
-	margin-top: 15px;
-	width: 100%;
-}
-.escribir input [type="button"]{
-	border: none;
-	border-radius: 0px;
-	font-family: Bebas Neue;
-	background: rgba(0, 0, 0, .5);
-}
-.escribir h3{
-	color: white;
-	margin: 0px;
-}
-/**------------ASIDE PRINCIPAL----------------*/
+	}*/
+	.escribir select{
+		-webkit-appearance: none;
+		background-image: url('../img/seleccionar.png');
+		border: none;
+		border-radius: 0px;
+		font-family: Bebas Neue;
+		font-size: 15px;
+		margin-right: 15px;
+		padding: 8px;
+		width: 30%;
+	}
+	.escribir option{
+		-webkit-appearance: none;
+		border: none;
+		border-radius: 0px;
+		background-color: red; 
+	}
+	.escribir textarea{
+		background-image: url('../img/textura1.png');
+		height: 300px;
+		margin-top: 15px;
+		width: 100%;
+	}
+	.escribir input [type="button"]{
+		border: none;
+		border-radius: 0px;
+		font-family: Bebas Neue;
+		background: rgba(0, 0, 0, .5);
+	}
+	.escribir h3{
+		color: white;
+		margin: 0px;
+	}
+	/**------------ASIDE PRINCIPAL----------------*/
 /*aside{
 	left: 80%;
 	position: fixed;
@@ -512,521 +524,522 @@ section{
 	letter-spacing:1px;
 	margin-bottom: 10px;
 	padding-left: 10px;
-}*/
+	}*/
 
-/**------------PERFIL----------------*/
-#accesos_perfil{
-	background: rgba(255, 255, 255, .5);
-	position: fixed;
-	top:155px;
-	width: 100%;
-	z-index: 5;
+	/**------------PERFIL----------------*/
+	#accesos_perfil{
+		background: rgba(255, 255, 255, .5);
+		position: fixed;
+		top:155px;
+		width: 100%;
+		z-index: 5;
 
-}
+	}
 
-/**------------COLABORAR----------------*/
-#colaborar{
-	background-color: #5496BA;
-	margin-top: 10px;
-}
-#colaborar textarea{
-	height: 200px;
-}
+	/**------------COLABORAR----------------*/
+	#colaborar{
+		background-color: #5496BA;
+		margin-top: 10px;
+	}
+	#colaborar textarea{
+		height: 200px;
+	}
 
-/*-----------HOME-------------*/
-#contenedor_perfil{
-	color:white;
-	margin-top: 200px;
-	margin-bottom: 50px;
-}
-#contenedor_perfil .frente{
-	z-index: 3;
-}
-#contenedor_home{
-	color:white;
-	margin-top: 158px;
-}
-#contenedor_home .frente{
-	z-index: 3;
-}
+	/*-----------HOME-------------*/
+	#contenedor_perfil{
+		color:white;
+		margin-top: 200px;
+		margin-bottom: 50px;
+	}
+	#contenedor_perfil .frente{
+		z-index: 3;
+	}
+	#contenedor_home{
+		color:white;
+		margin-top: 158px;
+	}
+	#contenedor_home .frente{
+		z-index: 3;
+	}
 
-/*---------------ARTICULO--------------------*/
-#contenedor_home article{
-	margin: 10px auto;
-	width: 90%;
-}
+	/*---------------ARTICULO--------------------*/
+	#contenedor_home article{
+		margin: 10px auto;
+		width: 90%;
+	}
 
-/*---------------ARTICULO--------------------*/
-#contenedor_perfil article{
-	margin: 10px auto;
-	width: 90%;
-}
-.cupos{
-	padding-left: 0;
-	padding-right: 0;
-	margin-top: 15px;
-}
+	/*---------------ARTICULO--------------------*/
+	#contenedor_perfil article{
+		margin: 10px auto;
+		width: 90%;
+	}
+	.cupos{
+		padding-left: 0;
+		padding-right: 0;
+		margin-top: 15px;
+	}
 
-#contenedor_perfil .cupos{
-	padding-left: 0;
-	padding-right: 0;
-	margin-top: 42px;
-}
+	#contenedor_perfil .cupos{
+		padding-left: 0;
+		padding-right: 0;
+		margin-top: 42px;
+	}
 
 /*.cupos div{
 	background-color: #5496BA;
-}*/
+	}*/
 
-.cupos h5{
-margin: 1px 0;
-padding-bottom: 4%;
-margin-top: 7%;
-padding-left: 10px;
-padding-right: 0;
-width: 62%;
-}
-.cupos a figure{
-	margin-left: 16%;
-	margin-top: 4%;
-	padding: 0 2px;
-}
-.cupos a figure img{
-	width: 100%;
-}
-.cupos .info{
-	margin: 5px 0;
-	margin-left: -13%;
-	padding-left: 0;
-	padding-right: 0;
-	width: 79%;
-}
-.cupos .colaborar{
-margin: 5px 0;
-margin-left: -13%;
-width: 78%;
-}
-.info_historia{
-	background-color: #5496BA;
-}
-.img_perfil{
-	margin-top: 7%;
-	position: absolute;
-	right: 118px;
-	z-index: 1;
-}
-
-#contenedor_perfil .img_perfil{
-	margin-top: 5%;
-}
-.img_perfil figure{
-	/*background-color: #5496BA;*/
-	border-radius: 100px;
-	padding: 20px;
-}
-.img_perfil img{
-	width: 100%;
-	border: 5px solid white;
-	border-radius: 100px;
-}
-.plumas{
-	background-color: #5496BA;
-	margin-top: 71px;
-}
-
-#contenedor_perfil .plumas{
-	margin-top: 64px;
-}
-.plumas a{
-	color: white;
-	margin-left: 16%;
-}
-
-.plumas figure{
-	margin-left: -14%;
-}
-
-.info_historia .info{
-	margin-top: 10px;
-}
-#estado_historia{
-	background-color: #98D67E;
-	border-radius: 30px;
-	margin-top: 5px;
-	margin-right: 5px;
-	height: 20px;
-}
-
-#estado_historia2{
-	background-color: #cf5d5d;
-	border-radius: 30px;
-	margin-top: 5px;
-	margin-right: 5px;
-	height: 20px;
-}
-
-article .cont_info{
-	background-image: url(../img/textura1.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: black;
-	margin-top: 10px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-article .cont_info h1{
-	font-size: 23px;
-	margin-bottom: 5px;
-}
-article .cont_info h3{
-	font-family: helvetica;
-	font-style: italic;
-	font-size: 18px;
-	margin-top: 10px;
-	margin-bottom: 5px;
-}
-article .cont_info p{
-	margin-left: 10px;
-	max-width: 100%;
-	font-family: helvetica;
-}
-a{
-	text-align: right;
-	text-decoration: none;
-}
-.clasificacion{
-	padding-top: 5px;
-}
-.clasificacion figure img{
-	width: 100%;
-}
-.clasificacion .tipo_historia figure{
-	padding-top: 8px;
-	padding-left: 5px;
-	padding-right: 2px;
-}
-.clasificacion .genero_historia figure{
-	padding-left: 12px;
-	padding-right: 2px;
-	padding-top: 4px;
-}
-/*---FIN CSS DE LA SECCION DEL ARTICULO---*/
-/*---COLABORADORES---*/
-#colaboradores{
-	margin-top: 180px;
-}
-#colaboradores h4{
-	color: white;
-}
-#creador{
-	border: 10px solid #5496BA;
-	border-radius: 50px;
-	margin-bottom: 60%;
-	margin-left: -60%;
-	width: 230%;
-}
-
-.colaboradoresIN{
-	margin-top: -3%;
-}
-.colaborador{
-	display: inline;
-}
-.colaborador img{
-	margin-left: 8px;
-	width: 30px;
-}
-#nuevoColaborador{
-	background-color: #54BA76;
-	border: 5px solid #54BA76;
-	border-radius: 100px;
-	margin-left: 8px;
-	padding: 0px 5px;
-}
-#nuevoColaborador a{
-	color: white;
-}
-.contenedor_visual{
-	margin: 0 auto;
-	margin-bottom: 4%;
-	width: 100%;
-}
-.vis{
-	margin-bottom: 10px;
-}
-.comentarios{
-	color:white;
-	margin: 0 auto;
-	width: 91%;
-}
-.comentarios .publicados{
-	background-color: rgba(250,250,250,0.5); 
-	margin-bottom: 10%;
-	padding: 10px;
-}
-.comentarios .publicados p{
-	font-family: helvetica;
-	color:black;
-}
-
-.comentarios .publicados figure{
-	padding-left: 1%;
-}
-.comentarios .comentar{
-margin-bottom: 60px;
-}
-.comentarios .comentar input{
-	color:black;
-}
-.comentarios .comentar textarea{
-	color:black;
-}
-.comments-wrapper .comment-body p, .comments-wrapper .squarespace-comments .new-comment-area .input form.comment-form textarea {
-   color: #000;
-}
-/*---------FIN COMENTARIOS------*/
-
-/*---CSS NOTIFICACIONES----*/
-#contenedor_notificacion{
-	background-color: rgba(0,0,0,0.5);
-	margin: 135px 15px 50px 15px;
-	padding: 15px;
-}
-#contenedor_notificacion article{
-	background-image: url(../img/textura1.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-bottom: 2px solid #6062D6; 
-	position: relative;
-}
-#contenedor_notificacion article .imagen_user{
-padding: 10px;
-}
-#contenedor_notificacion article p{
-	font-family: helvetica;
-	padding-right: 0;
-}
-.marcador{
-	bottom: 0;
-	padding: 0;
-	position: absolute;
-	right: 0;
-}
-
-
-.popUpNotificacion{
-	background-color: rgba(0,0,0,0.8);
-	left: 4%;
-	padding: 20px;
-	position: fixed;
-	top: 80px;
-	z-index: 10;
-}
-.popUpNotificacion .contenedorNotif{
-	background-color: rgb(240,240,240);
-	padding: 10px;
-}
-.popUpNotificacion .contenedorNotif .notifSolicitudAprovada{
-	border-bottom: 1px solid rgb(100,100,215) ;
-	border-right: 1px solid rgb(100,100,215) ;
-	padding: 5px;
-}
-.popUpNotificacion .contenedorNotif .notifSolicitudAprovada p{
-	line-height: 95%;
-	margin: 0;
-}
-
-
-/*---CSS COLORES----*/
-.Romance{
-	background-color: #e07777;
-}
-
-.Comedia{
-	background-color: #5496BA;
-}
-
-.Fantasia{
-	background-color: #51a7ad;
-}
-
-.Ficcion{
-	background-color: #5151ad;
-}
-
-.Horror{
-	background-color: #3b3b3b;
-}
-
-.Random{
-	background-color: #85ad1f;
-}
-
-.Drama{
-	background-color: #1fad91;
-}
-
-.Improvisar{
-	background-color: #505050;
-}
-
-@media screen and (min-width: 600px){
-	#login_conten aside input[type=submit]{
-		font-size: 23px;
-		width: 20%;
+	.cupos h5{
+		margin: 1px 0;
+		padding-bottom: 4%;
+		margin-top: 7%;
+		padding-left: 10px;
+		padding-right: 0;
+		width: 62%;
 	}
-}
-@media screen and (min-width:800px){
-
-	body{
-		font-size: 16pt;
+	.cupos a figure{
+		margin-left: 16%;
+		margin-top: 4%;
+		padding: 0 2px;
 	}
-
-	#login_nav figure{
-		width: 20%;
-	}
-
-	#login_nav figure img{
+	.cupos a figure img{
 		width: 100%;
 	}
-
-	#login_div p{
-		font-size: 20pt;
+	.cupos .info{
+		margin: 5px 0;
+		margin-left: -13%;
+		padding-left: 0;
+		padding-right: 0;
+		width: 79%;
 	}
-
-	#login_conten select{
-		padding-left: 25px;
+	.cupos .colaborar{
+		margin: 5px 0;
+		margin-left: -13%;
+		width: 78%;
 	}
-
-	.cont_input{
-		padding: 0;
+	.info_historia{
+		background-color: #5496BA;
 	}
-
-	#login_conten aside input[type=submit]{
-		font-size: 28px;
-	}
-
-	.home_forms input[type=submit]{
-		height: 57px;
-	}
-
-	#home_body{
-		font-size: 16pt;
-		background-size: cover;
-	}
-
-	#perfil_body{
-		font-size: 16pt;
-	}
-
-	#contenedor_perfil h5{
-		font-size: 16pt;
-	}
-
-	#home_body h5{
-		font-size: 20pt;
-	}
-
-	#cabecera h1{
-		font-size: 20pt;
-		margin-top: 0;
-		padding: 15px;
-	}
-
-	.buscador{
-	background-color: rgba(250,250,250,0.7);
-	padding: 8px 0 0 0;
-	height: 45px;
-	}
-
-	.buscador figure {
-		background:none;
-		width: 16%;
-	}
-
-	.buscador img{
-		width: 100%;
-		background:none;
-	}
-
-	.buscador input{
-		padding: 0;
-		font-size: 14pt;
-	}
-
 	.img_perfil{
-		margin-top: 1%;
+		margin-top: 7%;
 		position: absolute;
-		right: 200px;
+		right: 118px;
 		z-index: 1;
 	}
 
+	#contenedor_perfil .img_perfil{
+		margin-top: 5%;
+	}
 	.img_perfil figure{
-	/*background-color: #5496BA;*/
-	border-radius: 200px;
-	padding: 20px;
-	width: 100%;
+		/*background-color: #5496BA;*/
+		border-radius: 100px;
+		padding: 20px;
 	}
-
 	.img_perfil img{
-		
+		width: 100%;
 		border: 5px solid white;
-		border-radius: 200px;
+		border-radius: 100px;
+	}
+	.plumas{
+		background-color: #5496BA;
+		margin-top: 71px;
 	}
 
-	#miperfil{
-		top: -100px;
-		right: 250px;
+	#contenedor_perfil .plumas{
+		margin-top: 64px;
+	}
+	.plumas a{
+		color: white;
+		margin-left: 16%;
 	}
 
-	#contenedor_home article{
-		width: 80%;
+	.plumas figure{
+		margin-left: -14%;
 	}
 
-	#tiempo_h h5{
-		padding-left: 60px;
+	.info_historia .info{
+		margin-top: 10px;
+	}
+	#estado_historia{
+		background-color: #98D67E;
+		border-radius: 30px;
+		margin-top: 5px;
+		margin-right: 5px;
+		height: 20px;
 	}
 
-	#cabecera li{
-		font-size: 16pt;
+	#estado_historia2{
+		background-color: #cf5d5d;
+		border-radius: 30px;
+		margin-top: 5px;
+		margin-right: 5px;
+		height: 20px;
 	}
 
-	.nombre_seccion h4{
-		font-size: 16pt;
+	article .cont_info{
+		background-image: url(../img/textura1.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: black;
+		margin-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
-
-	.nave_buscador{
-		position: absolute;
-		top: 120px;
-		left: 665px;
+	article .cont_info h1{
+		font-size: 23px;
+		margin-bottom: 5px;
 	}
-
-	.nombre_seccion{
-		position: fixed;
-		top:75px;
+	article .cont_info h3{
+		font-family: helvetica;
+		font-style: italic;
+		font-size: 18px;
+		margin-top: 10px;
+		margin-bottom: 5px;
 	}
-
-	#info_cont{
-		margin: 50px 0 25px 0;
-		margin-top: 50px;
+	article .cont_info p{
+		margin-left: 10px;
+		max-width: 100%;
+		font-family: helvetica;
 	}
-
-	.info_historia{
-		margin-bottom: 80px;
+	a{
+		text-align: right;
+		text-decoration: none;
 	}
-
-	.escribir select{
-		width: 15%;
+	.clasificacion{
+		padding-top: 5px;
 	}
-
-	#accesos_perfil {
-		top: 118px;
-		width: 65%;
-		height: 47px;
+	.clasificacion figure img{
+		width: 100%;
 	}
-
+	.clasificacion .tipo_historia figure{
+		padding-top: 8px;
+		padding-left: 5px;
+		padding-right: 2px;
+	}
+	.clasificacion .genero_historia figure{
+		padding-left: 12px;
+		padding-right: 2px;
+		padding-top: 4px;
+	}
+	/*---FIN CSS DE LA SECCION DEL ARTICULO---*/
+	/*---COLABORADORES---*/
+	#colaboradores{
+		margin-top: 180px;
+	}
+	#colaboradores h4{
+		color: white;
+	}
 	#creador{
-		border-radius: 150px;
+		border: 10px solid #5496BA;
+		border-radius: 50px;
+		margin-bottom: 60%;
+		margin-left: -60%;
+		width: 230%;
 	}
 
-}
+	.colaboradoresIN{
+		margin-top: -3%;
+	}
+	.colaborador{
+		display: inline;
+	}
+	.colaborador img{
+		margin-left: 8px;
+		width: 30px;
+	}
+	#nuevoColaborador{
+		background-color: #54BA76;
+		border: 5px solid #54BA76;
+		border-radius: 100px;
+		margin-left: 8px;
+		padding: 0px 5px;
+	}
+	#nuevoColaborador a{
+		color: white;
+	}
+	.contenedor_visual{
+		margin: 0 auto;
+		margin-bottom: 4%;
+		width: 100%;
+	}
+	.vis{
+		margin-bottom: 10px;
+	}
+	.comentarios{
+		color:white;
+		margin: 0 auto;
+		width: 91%;
+	}
+	.comentarios .publicados{
+		background-color: rgba(250,250,250,0.5); 
+		margin-bottom: 10%;
+		padding: 10px;
+	}
+	.comentarios .publicados p{
+		font-family: helvetica;
+		color:black;
+	}
+
+	.comentarios .publicados figure{
+		padding-left: 1%;
+	}
+	.comentarios .comentar{
+		margin-bottom: 60px;
+	}
+	.comentarios .comentar input{
+		color:black;
+	}
+	.comentarios .comentar textarea{
+		color:black;
+	}
+	.comments-wrapper .comment-body p, .comments-wrapper .squarespace-comments .new-comment-area .input form.comment-form textarea {
+		color: #000;
+	}
+	/*---------FIN COMENTARIOS------*/
+
+	/*---CSS NOTIFICACIONES----*/
+	#contenedor_notificacion{
+		background-color: rgba(0,0,0,0.5);
+		margin: 135px 15px 50px 15px;
+		padding: 15px;
+	}
+	#contenedor_notificacion article{
+		background-image: url(../img/textura1.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-bottom: 2px solid #6062D6; 
+		position: relative;
+	}
+	#contenedor_notificacion article .imagen_user{
+		padding: 10px;
+	}
+	#contenedor_notificacion article p{
+		font-family: helvetica;
+		padding-right: 0;
+	}
+	.marcador{
+		bottom: 0;
+		padding: 0;
+		position: absolute;
+		right: 0;
+	}
+
+
+	.popUpNotificacion{
+		background-color: rgba(0,0,0,0.8);
+		left: 4%;
+		padding: 20px;
+		position: fixed;
+		top: 80px;
+		z-index: 10;
+	}
+
+	.popUpNotificacion .contenedorNotif{
+		background-color: rgb(240,240,240);
+		padding: 10px;
+	}
+	.popUpNotificacion .contenedorNotif .notifSolicitudAprovada{
+		border-bottom: 1px solid rgb(100,100,215) ;
+		border-right: 1px solid rgb(100,100,215) ;
+		padding: 5px;
+	}
+	.popUpNotificacion .contenedorNotif .notifSolicitudAprovada p{
+		line-height: 95%;
+		margin: 0;
+	}
+
+
+	/*---CSS COLORES----*/
+	.Romance{
+		background-color: #e07777;
+	}
+
+	.Comedia{
+		background-color: #5496BA;
+	}
+
+	.Fantasia{
+		background-color: #51a7ad;
+	}
+
+	.Ficcion{
+		background-color: #5151ad;
+	}
+
+	.Horror{
+		background-color: #3b3b3b;
+	}
+
+	.Random{
+		background-color: #85ad1f;
+	}
+
+	.Drama{
+		background-color: #1fad91;
+	}
+
+	.Improvisar{
+		background-color: #505050;
+	}
+
+	@media screen and (min-width: 600px){
+		#login_conten aside input[type=submit]{
+			font-size: 23px;
+			width: 20%;
+		}
+	}
+	@media screen and (min-width:800px){
+
+		body{
+			font-size: 16pt;
+		}
+
+		#login_nav figure{
+			width: 20%;
+		}
+
+		#login_nav figure img{
+			width: 100%;
+		}
+
+		#login_div p{
+			font-size: 20pt;
+		}
+
+		#login_conten select{
+			padding-left: 25px;
+		}
+
+		.cont_input{
+			padding: 0;
+		}
+
+		#login_conten aside input[type=submit]{
+			font-size: 28px;
+		}
+
+		.home_forms input[type=submit]{
+			height: 57px;
+		}
+
+		#home_body{
+			font-size: 16pt;
+			background-size: cover;
+		}
+
+		#perfil_body{
+			font-size: 16pt;
+		}
+
+		#contenedor_perfil h5{
+			font-size: 16pt;
+		}
+
+		#home_body h5{
+			font-size: 20pt;
+		}
+
+		#cabecera h1{
+			font-size: 20pt;
+			margin-top: 0;
+			padding: 15px;
+		}
+
+		.buscador{
+			background-color: rgba(250,250,250,0.7);
+			padding: 8px 0 0 0;
+			height: 45px;
+		}
+
+		.buscador figure {
+			background:none;
+			width: 16%;
+		}
+
+		.buscador img{
+			width: 100%;
+			background:none;
+		}
+
+		.buscador input{
+			padding: 0;
+			font-size: 14pt;
+		}
+
+		.img_perfil{
+			margin-top: 1%;
+			position: absolute;
+			right: 200px;
+			z-index: 1;
+		}
+
+		.img_perfil figure{
+			/*background-color: #5496BA;*/
+			border-radius: 200px;
+			padding: 20px;
+			width: 100%;
+		}
+
+		.img_perfil img{
+
+			border: 5px solid white;
+			border-radius: 200px;
+		}
+
+		#miperfil{
+			top: -100px;
+			right: 250px;
+		}
+
+		#contenedor_home article{
+			width: 80%;
+		}
+
+		#tiempo_h h5{
+			padding-left: 60px;
+		}
+
+		#cabecera li{
+			font-size: 16pt;
+		}
+
+		.nombre_seccion h4{
+			font-size: 16pt;
+		}
+
+		.nave_buscador{
+			position: absolute;
+			top: 120px;
+			left: 665px;
+		}
+
+		.nombre_seccion{
+			position: fixed;
+			top:75px;
+		}
+
+		#info_cont{
+			margin: 50px 0 25px 0;
+			margin-top: 50px;
+		}
+
+		.info_historia{
+			margin-bottom: 80px;
+		}
+
+		.escribir select{
+			width: 15%;
+		}
+
+		#accesos_perfil {
+			top: 118px;
+			width: 65%;
+			height: 47px;
+		}
+
+		#creador{
+			border-radius: 150px;
+		}
+
+	}
 

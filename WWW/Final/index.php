@@ -32,7 +32,7 @@
         </div>
         <div class="cont_input col-xs-12 col-sm-5">
         <figure class="col-xs-2 col-sm-1"><img src="img/password_log_icon.png" alt=""></figure>
-        <input id="pwLogin" class="col-xs-10 col-sm-9" type="text" name="pw" placeholder="Contraseña">
+        <input id="pwLogin" class="col-xs-10 col-sm-9" type="password" name="pw" placeholder="Contraseña">
         </div>
         <div class="cont_submit col-xs-12 col-sm-2">
         <input class="col-xs-12" type="submit" value="INICIAR SESIÓN">
