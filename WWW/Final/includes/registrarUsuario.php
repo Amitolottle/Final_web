@@ -13,7 +13,7 @@
     if($pw==$confirmacion){
         $result["error"]="false";
         $registrar="INSERT INTO Continuara.usuarios
-        (`correo`, `nombre`, `contrasena`, `nacimiento`, `genero`, `rutaImg`) VALUES ('$correo','$nombres','$pw','$fecha','$genero', 'images/default.png')";
+        (`correo`, `nombre`, `contrasena`, `nacimiento`, `genero`, `rutaImg`) VALUES ('$correo','$nombres','$pw','$fecha','$genero', 'img/default.png')";
         $comunicacion= mysqli_query($con,$registrar);
 
         //Luego selecciona el último usuario que se acabó de añadir

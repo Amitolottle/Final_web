@@ -93,12 +93,12 @@
           echo"<div class='frente info col-xs-11 ".$rowHistorias["categoria"]."'>";
             echo"<h5>".$rowHistorias["cupos"]." cupos disponibles</h5>";
           echo"</div>";
-
           echo"<div class='colaborar col-xs-12 ".$rowHistorias["categoria"]."'>";
             echo"<h5 class='frente col-xs-8'>Colaborar</h5>";
-            echo"<a href='includes/validarContribucion.php?idHistoria=".$rowHistorias["idHistoria"]."'><figure class='col-xs-2'><img src='img/btn_mas.png' alt=''></figure></a>";
+            echo"<a class='linkCol' data-colaboracionID='".$rowHistorias["idHistoria"]."' href='#'><figure class='col-xs-2'><img src='img/btn_mas.png' alt=''></figure></a>";
             echo"<div class='col-xs-2'></div>";
           echo"</div>";
+
         echo"</div>";
         echo"<div class='col-xs-4'></div>";
         echo"<div class='img_perfil col-xs-5'>";
@@ -109,16 +109,23 @@
         $resPlumas=mysqli_query($con,$sqlPlumas);
         $filasPlumas=mysqli_num_rows($resPlumas);
 
-          echo"<a id='".$rowHistorias["idHistoria"]."' class='linkHist' href='#'><figure class='col-xs-2'><img src='img/pluma_icon.png' alt=''></figure>".$filasPlumas." plumas</a>";
+          echo"<a class='linkHist' data-plumaID='".$rowHistorias["idHistoria"]."' href='#'><figure class='col-xs-2'><img src='img/pluma_icon.png' alt=''></figure>".$filasPlumas." plumas</a>";
         echo"</div>";
         echo"<div class='info_historia col-xs-12 ".$rowHistorias["categoria"]."'>";
           echo"<div class='frente info col-xs-5'>";
-            echo"<div id='estado_historia' class='col-xs-2'></div>";
-            echo"<h5>Historia en curso</h5>";
+          if($rowHistorias["tiempo"]<1){
+            echo"<div id='estado_historia2'  class='col-xs-2'></div>";
+             echo"<h5>Historia Finalizada</h5>";
+            }else{
+              echo"<div id='estado_historia' class='col-xs-2'></div>";
+               echo"<h5>Historia en curso</h5>";
+            }
           echo"</div>";
           echo"<div class='col-xs-2'></div>";
           echo"<div class='frente info col-xs-5'>";
-            echo"<h5>tiempo restante: ".$rowHistorias["tiempo"]."</h5>";
+            echo"<h5>tiempo restante:</h5";
+            echo"</br>";
+            echo"<h5>".$rowHistorias["tiempo"]." Minutos</h5>";
           echo"</div>";
           echo"<div class='cont_info col-xs-12'>";
             echo"<h1>".$rowHistorias["titulo"].", por: ".$rowHistorias["creador"]."</h1>";

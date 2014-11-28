@@ -19,7 +19,10 @@ $(document).ready(function(){
 				window.location.replace("home.php");
 			}else{
 				console.log("PUTA VIDA");
-				window.location.replace("index.php");
+				$("#correoLogin").val('');
+				$("#pwLogin").val('');
+				alert("Datos incorrectos, vuelva a digitarlos de nuevo");
+				//window.location.replace("index.php");
 			}
 			
 		}).error(function(error){
@@ -81,8 +84,7 @@ $(document).ready(function(){
 	});
 
 	$( ".linkHist" ).click(function( event ) {
-		console.log("ID Historia: "+this.id);
-		var idHis=this.id;
+		var idHis=this.getAttribute("data-plumaID");
 		event.preventDefault();
 			$.ajax({
 			type: "POST",
@@ -93,6 +95,32 @@ $(document).ready(function(){
 		}).success(function(result){
 			console.log("Resultado: "+result);
 			location.reload(false);
+		}).error(function(error){
+			console.log("Error: "+ error);
+			//
+		})
+	});
+
+	$( ".linkCol" ).click(function( event ) {
+		var idHis=this.getAttribute("data-colaboracionID");
+		console.log(idHis);
+		event.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "includes/validarContribucion.php",
+			data: { idHistoria: idHis}
+		}).done(function(){
+			console.log("Solicitud enviada al API");
+		}).success(function(result){
+			console.log("Resultado: "+result);
+			var concaCon=JSON.parse(result);
+			console.log("Resultado: "+concaCon.error);
+			if(concaCon.error=="false"){
+				alert("Tu solicitud sigue sin ser aprobada");
+			}else{
+				console.log("PUTA VIDA");
+				alert("Has enviado una solicitud para colaborar en esta historia, se te notificará cuando el creador haya aceptado tu solicitud");
+			}
 		}).error(function(error){
 			console.log("Error: "+ error);
 			//
@@ -118,6 +146,48 @@ $(document).ready(function(){
 			//
 		})
 	});
+
+
+	$( "#crearHist" ).submit(function( event ) {
+		console.log("FUNCREAR");
+		var tituloCrear=$("#tituloCrear").val();
+		var tipoCrear=$("#tipoCrear").val();
+		var generoCrear=$("#generoCrear").val();
+		var contenidoCrear=$("#contenidoCrear").val();
+		event.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "includes/crearHistoria.php",
+			data: { titulo: tituloCrear, tipo: tipoCrear, genero:generoCrear, contenido:contenidoCrear }
+		}).done(function(){
+			console.log("Solicitud enviada al API");
+		}).success(function(result){
+			console.log("Resultado: "+result);
+			alert("Has creado una historia, puedes verla en el menú principal");
+			window.location.replace("home.php");
+			
+		}).error(function(error){
+			console.log("Error: "+ error);
+			
+		})
+	});
+
+
+	window.setInterval(function(){
+		$.ajax({
+			type: "POST",
+			url: "includes/restarTiempo.php",
+		}).done(function(){
+			console.log("Solicitud enviada al API");
+		}).success(function(result){
+			console.log("Resultado: "+result);
+			location.reload(false);
+		}).error(function(error){
+			console.log("Error: "+ error);
+			//
+		})
+	},60000);
+   
 	
 });
 

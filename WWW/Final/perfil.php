@@ -125,12 +125,17 @@
         $sqlPlumas="SELECT plumas.id FROM Continuara.plumas WHERE plumas.idHistoria='".$rowHistorias["idHistoria"]."'";
         $resPlumas=mysqli_query($con,$sqlPlumas);
         $filasPlumas=mysqli_num_rows($resPlumas);
-          echo"<a href='includes/agregarPluma.php?idHistoria=".$rowHistorias["idHistoria"]."'><figure class='col-xs-2'><img src='img/pluma_icon.png' alt=''></figure>".$filasPlumas." plumas</a>";
+          echo"<a class='linkHist' data-plumaID='".$rowHistorias["idHistoria"]."' href='#'><figure class='col-xs-2'><img src='img/pluma_icon.png' alt=''></figure>".$filasPlumas." plumas</a>";
         echo"</div>";
         echo"<div class='info_historia col-xs-12 ".$rowHistorias["categoria"]."'>";
           echo"<div class='frente info col-xs-5'>";
-            echo"<div id='estado_historia' class='col-xs-2'></div>";
-            echo"<h5>Historia en curso</h5>";
+           if($rowHistorias["tiempo"]<1){
+            echo"<div id='estado_historia2'  class='col-xs-2'></div>";
+             echo"<h5>Historia Finalizada</h5>";
+            }else{
+              echo"<div id='estado_historia' class='col-xs-2'></div>";
+               echo"<h5>Historia en curso</h5>";
+            }
           echo"</div>";
           echo"<div class='col-xs-2'></div>";
           echo"<div class='frente info col-xs-5'>";

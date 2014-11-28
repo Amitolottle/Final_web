@@ -353,9 +353,7 @@ margin-right: 0;
 	padding-left: 4px;
 	padding-right: 10px;
 }
-.raya {
-	border-left: 1px solid white;
-}
+
 
 
 /*--barra de busqueda--*/
@@ -655,6 +653,15 @@ width: 78%;
 	margin-right: 5px;
 	height: 20px;
 }
+
+#estado_historia2{
+	background-color: #cf5d5d;
+	border-radius: 30px;
+	margin-top: 5px;
+	margin-right: 5px;
+	height: 20px;
+}
+
 article .cont_info{
 	background-image: url(../img/textura1.png);
 	background-repeat: no-repeat;
@@ -830,5 +837,9 @@ padding: 10px;
 
 .Drama{
 	background-color: #1fad91;
+}
+
+.Improvisar{
+	background-color: #505050;
 }
 

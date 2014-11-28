@@ -69,27 +69,27 @@
     </div>
 		<div class="col-xs-1"></div>
 		<section class='col-xs-10' id='crear'>
-			<form class ='escribir'>
+			<form id="crearHist" class ='escribir' method="POST">
 				<!--<img id='pluma' src= "img/pluma.png"> -->
-				<input type="text" name="titulo" value="TITULO">
-				<select name = "TIPO DE HISTORIA">
-					<option value = "cuento corto">CUENTO CORTO</option>
-					<option value = "cuento medio">CUENTO MEDIO</option>
-					<option value = "cuento largo">CUENTO LARGO</option>
-					<option value = "continuara">CONTINUARÁ</option>
-				</select>
-				<select name = "CATEGORIA">
-					<option value = "romance">ROMANCE</option>
-					<option value = "ficcion">FICCIÓN</option>
-					<option value = "comedia">COMEDOA</option>
-					<option value = "drama">DRAMA</option>
-					<option value = "fantasia">FANTASIA</option>
-					<option value = "horror">HORROR</option>
-					<option value = "improvisar">IMPROVISAR</option>
-				</select>
-				<textarea></textarea>
+				<input id="tituloCrear" type="text" name="titulo" value="TITULO">
+				  <select id="tipoCrear" name = "tipo">
+          <option value = "cuento corto">CUENTO CORTO</option>
+          <option value = "cuento medio">CUENTO MEDIO</option>
+          <option value = "cuento largo">CUENTO LARGO</option>
+          <option value = "continuara">CONTINUARÁ</option>
+        </select>
+        <select id="generoCrear" name = "genero">
+          <option value = "Romance">ROMANCE</option>
+          <option value = "Ficcion">FICCIÓN</option>
+          <option value = "Comedia">COMEDIA</option>
+          <option value = "Drama">DRAMA</option>
+          <option value = "Fantasia">FANTASIA</option>
+          <option value = "Horror">HORROR</option>
+          <option value = "Improvisar">IMPROVISAR</option>
+        </select>
+        <textarea id="contenidoCrear" name="contenido"></textarea>
 				<div class="col-xs-10"></div>
-				<input class="col-xs-2" type="button" value="PUBLICAR">
+				<input class="col-xs-2" type="submit" value="PUBLICAR">
 			</form>
 		</section>
 		<div class="col-xs-1"></div>
