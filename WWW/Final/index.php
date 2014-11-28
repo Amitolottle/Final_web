@@ -21,20 +21,20 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
   <header id="login_header" class="row"> 
-    <div class="col-xs-2"></div>
-     <figure class="col-xs-8"><img src="img/logo_log.png" alt=""></figure>
-     <div class="col-xs-2"></div>
+    <div class="col-xs-2 col-sm-3"></div>
+     <figure class="col-xs-6 col-sm-6"><img src="img/logo_log.png" alt=""></figure>
+     <div class="col-xs-3 col-sm-3"></div>
     <nav id="login_nav" class="col-sm-12">
       <form id="login" class="home_forms col-sm-12"  method="POST">
-        <div class="cont_input col-xs-12">
-        <figure class="col-xs-2"><img src="img/user_log_icon.png" alt=""></figure>
-        <input id="correoLogin" class="col-xs-10" type="text" name="correo" placeholder="Correo">
+        <div class="cont_input col-xs-12 col-sm-5">
+        <figure class="col-xs-2 col-sm-1"><img src="img/user_log_icon.png" alt=""></figure>
+        <input id="correoLogin" class="col-xs-10 col-sm-9" type="text" name="correo" placeholder="Correo">
         </div>
-        <div class="cont_input col-xs-12">
-        <figure class="col-xs-2"><img src="img/password_log_icon.png" alt=""></figure>
-        <input id="pwLogin" class="col-xs-10" type="text" name="pw" placeholder="Contraseña">
+        <div class="cont_input col-xs-12 col-sm-5">
+        <figure class="col-xs-2 col-sm-1"><img src="img/password_log_icon.png" alt=""></figure>
+        <input id="pwLogin" class="col-xs-10 col-sm-9" type="text" name="pw" placeholder="Contraseña">
         </div>
-        <div class="cont_submit col-xs-12">
+        <div class="cont_submit col-xs-12 col-sm-2">
         <input class="col-xs-12" type="submit" value="INICIAR SESIÓN">
         </div>
       </form>
