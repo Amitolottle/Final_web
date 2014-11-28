@@ -47,7 +47,7 @@
 
                <nav class="col-xs-6 col-sm-3 col-sm-offset-4">
                 <ul>
-                  <li>0 NOTIFICACIONES</li>
+                  <a id="notificacion" href="#"><li>0 NOTIFICACIONES</li></a>
                   <a id="salir" href="#"><li class='raya'>SALIR</li></a>
                 </ul>
               </nav>
@@ -190,6 +190,11 @@
           <a href="crear.php"><li class="col-xs-4 col-sm-4">CREAR</li></a>
         </ul>
       </nav>
+
+      <div class="col-xs-11 col-sm-11 popUpNotificacion">
+        <div class="contenedorNotif">
+        </div>
+      </div>
 
 
 

@@ -41,7 +41,7 @@
                <div class="col-xs-0 col-sm-5"></div>
       <nav class="col-xs-6 col-sm-3">
         <ul>
-          <li>0 NOTIFICACIONES</li>
+          <a id="notificacion" href="#"><li>0 NOTIFICACIONES</li></a>
           <a href="includes/terminarSesion.php"><li class='raya'>SALIR</li></a>
         </ul>
       </nav>
@@ -214,6 +214,11 @@
           <a href="crear.php"><li class="col-xs-4">CREAR</li></a>
         </ul>
       </nav>
+    <div class="col-xs-11 col-sm-11 popUpNotificacion">
+        <div class="contenedorNotif">
+        </div>
+    </div>
+
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
           <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 

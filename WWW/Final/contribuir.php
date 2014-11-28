@@ -52,7 +52,7 @@ if(isset($_GET["idHistoria"])){
               ?>
       			<nav class="col-xs-6">
         			<ul>
-        			  <li>0 NOTIFICACIONES</li>
+        			  <a id="notificacion" href="#"><li>0 NOTIFICACIONES</li></a>
         			  <a href="includes/terminarSesion.php"><li class='raya'>SALIR</li></a>
         			</ul>
       			</nav>
@@ -168,7 +168,11 @@ if(isset($_GET["idHistoria"])){
           <a href="perfil.php"><li class="col-xs-4">PERFIL</li></a>
           <a href="crear.php"><li class="col-xs-4">CREAR</li></a>
         	</ul>
-      	</nav>
+    </nav>
+    <div class="col-xs-11 col-sm-11 popUpNotificacion">
+      <div class="contenedorNotif">
+      </div>
+    </div>
         <?php
        }
   

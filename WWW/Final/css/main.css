@@ -812,6 +812,30 @@ padding: 10px;
 	right: 0;
 }
 
+
+.popUpNotificacion{
+	background-color: rgba(0,0,0,0.8);
+	left: 4%;
+	padding: 20px;
+	position: fixed;
+	top: 80px;
+	z-index: 10;
+}
+.popUpNotificacion .contenedorNotif{
+	background-color: rgb(240,240,240);
+	padding: 10px;
+}
+.popUpNotificacion .contenedorNotif .notifSolicitudAprovada{
+	border-bottom: 1px solid rgb(100,100,215) ;
+	border-right: 1px solid rgb(100,100,215) ;
+	padding: 5px;
+}
+.popUpNotificacion .contenedorNotif .notifSolicitudAprovada p{
+	line-height: 95%;
+	margin: 0;
+}
+
+
 /*---CSS COLORES----*/
 .Romance{
 	background-color: #e07777;
